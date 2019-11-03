@@ -47,7 +47,7 @@
       
         
         
-        <meta name="theme-color" content="#4caf50">
+        <meta name="theme-color" content="">
       
     
     
@@ -71,7 +71,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="lightgreen">
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -902,7 +902,7 @@ one simple CLI tool.</p>
 
         <span class="nv">self</span>.<span class="nv">function_list</span>.<span class="nv">update</span><span class="ss">(</span><span class="nv">kwargs</span><span class="ss">)</span>
 
-    <span class="nv">def</span> <span class="nv">run</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">function_alias</span><span class="ss">)</span>:
+    <span class="nv">def</span> <span class="nv">run</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">function_alias</span>: <span class="nv">str</span><span class="ss">)</span>:
 
         <span class="s2">&quot;&quot;&quot;</span><span class="s">Run a certain function by their name/alias</span><span class="s2">&quot;&quot;&quot;</span>
 
@@ -990,13 +990,13 @@ one simple CLI tool.</p>
 <h5 id="run">run</h5>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
-    <span class="n">function_alias</span>
+    <span class="n">function_alias</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </pre></div>
 
 
 <p>Run a certain function by their name/alias</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="n">def</span> <span class="n">run</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">function_alias</span><span class="p">):</span>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="n">def</span> <span class="n">run</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">function_alias</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
 
         <span class="ss">&quot;&quot;&quot;Run a certain function by their name/alias&quot;&quot;&quot;</span>
 

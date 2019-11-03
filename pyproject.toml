@@ -35,3 +35,7 @@ advent-of-code = "advent_of_code.cli:main"
 
 [tool.portray]
 modules=["advent_of_code"]
+
+[tool.portray.mkdocs.theme]
+name = "material"
+palette = {primary = "black", accent = "indigo"}

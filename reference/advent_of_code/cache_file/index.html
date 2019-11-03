@@ -47,7 +47,7 @@
       
         
         
-        <meta name="theme-color" content="#4caf50">
+        <meta name="theme-color" content="">
       
     
     
@@ -71,7 +71,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="lightgreen">
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -610,39 +610,15 @@
 
 <span class="k">def</span> <span class="nf">check_if_downloaded</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 
-    <span class="sd">&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Check if an input is downloaded and cached or not in cache location&quot;&quot;&quot;</span>
 
-<span class="sd">    Check if an input is downloaded and cached or not in cache location</span>
-
-<span class="sd">    ***Parameters***</span>
-
-<span class="sd">    - `year`: *int*</span>
-
-<span class="sd">    :   Year for which input download need to be checked out</span>
-
-<span class="sd">    - `day`: *int*</span>
-
-<span class="sd">    :    Day for which input download need to be checked out</span>
-
-<span class="sd">    - `session`: *str*</span>
-
-<span class="sd">    :    Session for which input download need to be checked out</span>
-
-<span class="sd">    ***Returns***</span>
-
-<span class="sd">    - *bool*</span>
-
-<span class="sd">    :    Returns out whether input for problem is downloaded for not</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">cache_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">input_file</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">cache_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;input_file&quot;</span><span class="p">)</span>
 
     <span class="n">cache_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">cache_file</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">cache_file</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">save_input_to_location</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">input_data</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">save_input_to_location</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">input_data</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;Save a input to its cache location for future reference and use&quot;&quot;&quot;</span>
 
@@ -656,17 +632,17 @@
 
         <span class="n">opened_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">delete_input</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">delete_input</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;Delete input from a cache folder&quot;&quot;&quot;</span>
 
-    <span class="n">cache_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">input_file</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">cache_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;input_file&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">Path</span><span class="p">(</span><span class="n">cache_file</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
 
         <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">cache_file</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">cache_file_data</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">cache_file_data</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
     <span class="sd">&quot;&quot;&quot;Return cache file input data from cache folder for certain problem&quot;&quot;&quot;</span>
 
@@ -674,7 +650,7 @@
 
     <span class="n">download_input</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span>
 
-    <span class="n">cache_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">input_file</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">cache_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;input_file&quot;</span><span class="p">)</span>
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cache_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">opened_file</span><span class="p">:</span>
 
@@ -682,17 +658,25 @@
 
     <span class="k">return</span> <span class="n">input_data</span>
 
-<span class="k">def</span> <span class="nf">save_submitted_answer</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">part</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">save_submitted_answer</span><span class="p">(</span>
+
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">answer</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;Save submitted input to file of problem&quot;&quot;&quot;</span>
 
-    <span class="n">submitted_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">submission</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">submitted_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;submission_file&quot;</span><span class="p">)</span>
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">submitted_file</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">opened_file</span><span class="p">:</span>
 
-        <span class="n">opened_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;{}!{}:{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">message</span><span class="p">))</span>
+        <span class="n">opened_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;{}!{}:{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">message</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">last_submitted_answer_message</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">part</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">last_submitted_answer_message</span><span class="p">(</span>
+
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">output</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 
@@ -702,7 +686,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">submission_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">submission</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">submission_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;submission_file&quot;</span><span class="p">)</span>
 
     <span class="n">last_answer_message</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
@@ -724,17 +708,17 @@
 
     <span class="k">return</span> <span class="n">last_answer_message</span>
 
-<span class="k">def</span> <span class="nf">save_last_submission_time</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">save_last_submission_time</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;Save a time where a request is performed for last submission&quot;&quot;&quot;</span>
 
-    <span class="n">last_time_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">last_file</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">last_time_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;last_time_file&quot;</span><span class="p">)</span>
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">last_time_file</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">opened_file</span><span class="p">:</span>
 
         <span class="n">opened_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span>
 
-<span class="k">def</span> <span class="nf">check_less_than_one_min_submission</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">check_less_than_one_min_submission</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
 
@@ -742,7 +726,7 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">last_time_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">last_file</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">last_time_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;last_time_file&quot;</span><span class="p">)</span>
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">last_time_file</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">opened_file</span><span class="p">:</span>
 
@@ -754,23 +738,23 @@
 
     <span class="k">return</span> <span class="n">early_submission</span>
 
-<span class="k">def</span> <span class="nf">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">input_file</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">submission</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">last_file</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
-    <span class="sd">&quot;&quot;&quot;Return out desire path for a config folders and files&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Return out desire path for a cache folders or files&quot;&quot;&quot;</span>
 
     <span class="n">cache_location</span> <span class="o">=</span> <span class="n">appdirs</span><span class="o">.</span><span class="n">user_cache_dir</span><span class="p">(</span><span class="n">appname</span><span class="o">=</span><span class="s2">&quot;advent-of-code&quot;</span><span class="p">)</span>
 
     <span class="n">cache_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cache_location</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">session</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">day</span><span class="p">))</span>
 
-    <span class="k">if</span> <span class="n">input_file</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;input_file&quot;</span><span class="p">:</span>
 
         <span class="n">cache_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cache_file</span><span class="p">,</span> <span class="s2">&quot;input.txt&quot;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">submission</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;submission_file&quot;</span><span class="p">:</span>
 
         <span class="n">cache_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cache_file</span><span class="p">,</span> <span class="s2">&quot;submission.txt&quot;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">last_file</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;last_time_file&quot;</span><span class="p">:</span>
 
         <span class="n">cache_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cache_file</span><span class="p">,</span> <span class="s2">&quot;time.txt&quot;</span><span class="p">)</span>
 
@@ -782,15 +766,15 @@
 <h2 id="functions">Functions</h2>
 <h3 id="cache_file_data">cache_file_data</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">cache_file_data</span><span class="p">(</span>
-    <span class="n">year</span><span class="p">,</span>
-    <span class="n">day</span><span class="p">,</span>
-    <span class="n">session</span>
-<span class="p">)</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </pre></div>
 
 
 <p>Return cache file input data from cache folder for certain problem</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">cache_file_data</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">cache_file_data</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
     <span class="sd">&quot;&quot;&quot;Return cache file input data from cache folder for certain problem&quot;&quot;&quot;</span>
 
@@ -798,7 +782,7 @@
 
     <span class="n">download_input</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">)</span>
 
-    <span class="n">cache_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">input_file</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">cache_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;input_file&quot;</span><span class="p">)</span>
 
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">cache_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">opened_file</span><span class="p">:</span>
 
@@ -819,65 +803,11 @@
 
 
 <p>Check if an input is downloaded and cached or not in cache location</p>
-<p><strong><em>Parameters</em></strong></p>
-<ul>
-<li>
-<dl>
-<dt><code>year</code>: <em>int</em></dt>
-<dd>Year for which input download need to be checked out</dd>
-</dl>
-</li>
-<li>
-<dl>
-<dt><code>day</code>: <em>int</em></dt>
-<dd>Day for which input download need to be checked out</dd>
-</dl>
-</li>
-<li>
-<dl>
-<dt><code>session</code>: <em>str</em></dt>
-<dd>Session for which input download need to be checked out</dd>
-</dl>
-</li>
-</ul>
-<p><strong><em>Returns</em></strong></p>
-<ul>
-<li>
-<dl>
-<dt><em>bool</em></dt>
-<dd>Returns out whether input for problem is downloaded for not</dd>
-</dl>
-</li>
-</ul>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">check_if_downloaded</span><span class="ss">(</span><span class="nv">year</span>: <span class="nv">int</span>, <span class="nv">day</span>: <span class="nv">int</span>, <span class="nv">session</span>: <span class="nv">int</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">bool</span>:
 
-    <span class="s2">&quot;&quot;&quot;</span>
+    <span class="s2">&quot;&quot;&quot;</span><span class="s">Check if an input is downloaded and cached or not in cache location</span><span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="nv">Check</span> <span class="k">if</span> <span class="nv">an</span> <span class="nv">input</span> <span class="nv">is</span> <span class="nv">downloaded</span> <span class="nv">and</span> <span class="nv">cached</span> <span class="nv">or</span> <span class="nv">not</span> <span class="nv">in</span> <span class="nv">cache</span> <span class="nv">location</span>
-
-    <span class="o">***</span><span class="nv">Parameters</span><span class="o">***</span>
-
-    <span class="o">-</span> `<span class="nv">year</span>`: <span class="o">*</span><span class="nv">int</span><span class="o">*</span>
-
-    :   <span class="nv">Year</span> <span class="k">for</span> <span class="nv">which</span> <span class="nv">input</span> <span class="nv">download</span> <span class="nv">need</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">checked</span> <span class="nv">out</span>
-
-    <span class="o">-</span> `<span class="nv">day</span>`: <span class="o">*</span><span class="nv">int</span><span class="o">*</span>
-
-    :    <span class="nv">Day</span> <span class="k">for</span> <span class="nv">which</span> <span class="nv">input</span> <span class="nv">download</span> <span class="nv">need</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">checked</span> <span class="nv">out</span>
-
-    <span class="o">-</span> `<span class="nv">session</span>`: <span class="o">*</span><span class="nv">str</span><span class="o">*</span>
-
-    :    <span class="nv">Session</span> <span class="k">for</span> <span class="nv">which</span> <span class="nv">input</span> <span class="nv">download</span> <span class="nv">need</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">checked</span> <span class="nv">out</span>
-
-    <span class="o">***</span><span class="nv">Returns</span><span class="o">***</span>
-
-    <span class="o">-</span> <span class="o">*</span><span class="nv">bool</span><span class="o">*</span>
-
-    :    <span class="nv">Returns</span> <span class="nv">out</span> <span class="nv">whether</span> <span class="nv">input</span> <span class="k">for</span> <span class="nv">problem</span> <span class="nv">is</span> <span class="nv">downloaded</span> <span class="k">for</span> <span class="nv">not</span>
-
-    <span class="s2">&quot;&quot;&quot;</span>
-
-    <span class="nv">cache_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">input_file</span><span class="o">=</span><span class="nv">True</span><span class="ss">)</span>
+    <span class="nv">cache_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">file_type</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">input_file</span><span class="s2">&quot;</span><span class="ss">)</span>
 
     <span class="nv">cache_file</span> <span class="o">=</span> <span class="nv">Path</span><span class="ss">(</span><span class="nv">cache_file</span><span class="ss">)</span>
 
@@ -888,15 +818,15 @@
 </details>
 <h3 id="check_less_than_one_min_submission">check_less_than_one_min_submission</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">check_less_than_one_min_submission</span><span class="p">(</span>
-    <span class="n">year</span><span class="p">,</span>
-    <span class="n">day</span><span class="p">,</span>
-    <span class="n">session</span>
-<span class="p">)</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </pre></div>
 
 
 <p>Check last submission time for solution return true if time is less than 60 second</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">check_less_than_one_min_submission</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">check_less_than_one_min_submission</span><span class="ss">(</span><span class="nv">year</span>: <span class="nv">int</span>, <span class="nv">day</span>: <span class="nv">int</span>, <span class="nv">session</span>: <span class="nv">str</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">bool</span>:
 
     <span class="s2">&quot;&quot;&quot;</span>
 
@@ -904,7 +834,7 @@
 
     <span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="nv">last_time_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">last_file</span><span class="o">=</span><span class="nv">True</span><span class="ss">)</span>
+    <span class="nv">last_time_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">file_type</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">last_time_file</span><span class="s2">&quot;</span><span class="ss">)</span>
 
     <span class="nv">with</span> <span class="nv">open</span><span class="ss">(</span><span class="nv">last_time_file</span>, <span class="s2">&quot;</span><span class="s">r</span><span class="s2">&quot;</span><span class="ss">)</span> <span class="nv">as</span> <span class="nv">opened_file</span>:
 
@@ -921,19 +851,19 @@
 </details>
 <h3 id="delete_input">delete_input</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">delete_input</span><span class="p">(</span>
-    <span class="n">year</span><span class="p">,</span>
-    <span class="n">day</span><span class="p">,</span>
-    <span class="n">session</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </pre></div>
 
 
 <p>Delete input from a cache folder</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">delete_input</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">delete_input</span><span class="ss">(</span><span class="nv">year</span>: <span class="nv">int</span>, <span class="nv">day</span>: <span class="nv">int</span>, <span class="nv">session</span>: <span class="nv">str</span><span class="ss">)</span>:
 
     <span class="s2">&quot;&quot;&quot;</span><span class="s">Delete input from a cache folder</span><span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="nv">cache_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">input_file</span><span class="o">=</span><span class="nv">True</span><span class="ss">)</span>
+    <span class="nv">cache_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">file_type</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">input_file</span><span class="s2">&quot;</span><span class="ss">)</span>
 
     <span class="k">if</span> <span class="nv">Path</span><span class="ss">(</span><span class="nv">cache_file</span><span class="ss">)</span>.<span class="nv">exists</span><span class="ss">()</span>:
 
@@ -944,18 +874,22 @@
 </details>
 <h3 id="last_submitted_answer_message">last_submitted_answer_message</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">last_submitted_answer_message</span><span class="p">(</span>
-    <span class="n">year</span><span class="p">,</span>
-    <span class="n">day</span><span class="p">,</span>
-    <span class="n">part</span><span class="p">,</span>
-    <span class="n">session</span><span class="p">,</span>
-    <span class="n">output</span>
-<span class="p">)</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">output</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </pre></div>
 
 
 <p>Check if answer is already submitted by user if submitted return message of last
 submission</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">last_submitted_answer_message</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">part</span>, <span class="nv">session</span>, <span class="nv">output</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">last_submitted_answer_message</span><span class="ss">(</span>
+
+    <span class="nv">year</span>: <span class="nv">int</span>, <span class="nv">day</span>: <span class="nv">int</span>, <span class="nv">part</span>: <span class="nv">int</span>, <span class="nv">session</span>: <span class="nv">str</span>, <span class="nv">output</span>: <span class="nv">str</span>
+
+<span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">str</span>:
 
     <span class="s2">&quot;&quot;&quot;</span>
 
@@ -965,7 +899,7 @@ submission</p>
 
     <span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="nv">submission_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">submission</span><span class="o">=</span><span class="nv">True</span><span class="ss">)</span>
+    <span class="nv">submission_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">file_type</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">submission_file</span><span class="s2">&quot;</span><span class="ss">)</span>
 
     <span class="nv">last_answer_message</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
@@ -992,16 +926,16 @@ submission</p>
 </details>
 <h3 id="save_input_to_location">save_input_to_location</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">save_input_to_location</span><span class="p">(</span>
-    <span class="n">year</span><span class="p">,</span>
-    <span class="n">day</span><span class="p">,</span>
-    <span class="n">session</span><span class="p">,</span>
-    <span class="n">input_data</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">input_data</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </pre></div>
 
 
 <p>Save a input to its cache location for future reference and use</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">save_input_to_location</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">input_data</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">save_input_to_location</span><span class="ss">(</span><span class="nv">year</span>: <span class="nv">int</span>, <span class="nv">day</span>: <span class="nv">int</span>, <span class="nv">session</span>: <span class="nv">str</span>, <span class="nv">input_data</span>: <span class="nv">str</span><span class="ss">)</span>:
 
     <span class="s2">&quot;&quot;&quot;</span><span class="s">Save a input to its cache location for future reference and use</span><span class="s2">&quot;&quot;&quot;</span>
 
@@ -1020,19 +954,19 @@ submission</p>
 </details>
 <h3 id="save_last_submission_time">save_last_submission_time</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">save_last_submission_time</span><span class="p">(</span>
-    <span class="n">year</span><span class="p">,</span>
-    <span class="n">day</span><span class="p">,</span>
-    <span class="n">session</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </pre></div>
 
 
 <p>Save a time where a request is performed for last submission</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">save_last_submission_time</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">save_last_submission_time</span><span class="ss">(</span><span class="nv">year</span>: <span class="nv">int</span>, <span class="nv">day</span>: <span class="nv">int</span>, <span class="nv">session</span>: <span class="nv">str</span><span class="ss">)</span>:
 
     <span class="s2">&quot;&quot;&quot;</span><span class="s">Save a time where a request is performed for last submission</span><span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="nv">last_time_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">last_file</span><span class="o">=</span><span class="nv">True</span><span class="ss">)</span>
+    <span class="nv">last_time_file</span> <span class="o">=</span> <span class="nv">_join_path</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span>, <span class="nv">file_type</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">last_time_file</span><span class="s2">&quot;</span><span class="ss">)</span>
 
     <span class="nv">with</span> <span class="nv">open</span><span class="ss">(</span><span class="nv">last_time_file</span>, <span class="s2">&quot;</span><span class="s">w</span><span class="s2">&quot;</span><span class="ss">)</span> <span class="nv">as</span> <span class="nv">opened_file</span>:
 
@@ -1043,26 +977,30 @@ submission</p>
 </details>
 <h3 id="save_submitted_answer">save_submitted_answer</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">save_submitted_answer</span><span class="p">(</span>
-    <span class="n">year</span><span class="p">,</span>
-    <span class="n">day</span><span class="p">,</span>
-    <span class="n">part</span><span class="p">,</span>
-    <span class="n">session</span><span class="p">,</span>
-    <span class="n">output</span><span class="p">,</span>
-    <span class="n">message</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">answer</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </pre></div>
 
 
 <p>Save submitted input to file of problem</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span> <span class="n">save_submitted_answer</span><span class="p">(</span><span class="k">year</span><span class="p">,</span> <span class="k">day</span><span class="p">,</span> <span class="n">part</span><span class="p">,</span> <span class="k">session</span><span class="p">,</span> <span class="k">output</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span> <span class="n">save_submitted_answer</span><span class="p">(</span>
+
+    <span class="k">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">session</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">answer</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">str</span>
+
+<span class="p">):</span>
 
     <span class="ss">&quot;&quot;&quot;Save submitted input to file of problem&quot;&quot;&quot;</span>
 
-    <span class="n">submitted_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="k">year</span><span class="p">,</span> <span class="k">day</span><span class="p">,</span> <span class="k">session</span><span class="p">,</span> <span class="n">submission</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+    <span class="n">submitted_file</span> <span class="o">=</span> <span class="n">_join_path</span><span class="p">(</span><span class="k">year</span><span class="p">,</span> <span class="k">day</span><span class="p">,</span> <span class="k">session</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="ss">&quot;submission_file&quot;</span><span class="p">)</span>
 
     <span class="k">with</span> <span class="k">open</span><span class="p">(</span><span class="n">submitted_file</span><span class="p">,</span> <span class="ss">&quot;a&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">opened_file</span><span class="p">:</span>
 
-        <span class="n">opened_file</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="ss">&quot;{}!{}:{}\n&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="k">output</span><span class="p">,</span> <span class="n">message</span><span class="p">))</span>
+        <span class="n">opened_file</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="ss">&quot;{}!{}:{}\n&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">message</span><span class="p">))</span>
 </pre></div>
 
 

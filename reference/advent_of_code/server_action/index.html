@@ -47,7 +47,7 @@
       
         
         
-        <meta name="theme-color" content="#4caf50">
+        <meta name="theme-color" content="">
       
     
     
@@ -71,7 +71,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="lightgreen">
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -554,7 +554,7 @@
 
 <span class="n">SUBMIT_URL</span> <span class="o">=</span> <span class="s2">&quot;https://adventofcode.com/{}/day/{}/answer&quot;</span>
 
-<span class="k">def</span> <span class="nf">download_input</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">download_input</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;Download file from a advent of code server and save it for future reference&quot;&quot;&quot;</span>
 
@@ -568,7 +568,7 @@
 
         <span class="n">save_input_to_location</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">html_data</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">submit_output</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">part</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">submit_output</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">output</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 
     <span class="sd">&quot;&quot;&quot;Submit solution output to a advent of code server&quot;&quot;&quot;</span>
 
@@ -679,15 +679,15 @@
 <h2 id="functions">Functions</h2>
 <h3 id="download_input">download_input</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">download_input</span><span class="p">(</span>
-    <span class="n">year</span><span class="p">,</span>
-    <span class="n">day</span><span class="p">,</span>
-    <span class="n">session</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </pre></div>
 
 
 <p>Download file from a advent of code server and save it for future reference</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">download_input</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">session</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">download_input</span><span class="ss">(</span><span class="nv">year</span>: <span class="nv">int</span>, <span class="nv">day</span>: <span class="nv">int</span>, <span class="nv">session</span>: <span class="nv">str</span><span class="ss">)</span>:
 
     <span class="s2">&quot;&quot;&quot;</span><span class="s">Download file from a advent of code server and save it for future reference</span><span class="s2">&quot;&quot;&quot;</span>
 
@@ -706,17 +706,17 @@
 </details>
 <h3 id="submit_output">submit_output</h3>
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">submit_output</span><span class="p">(</span>
-    <span class="n">year</span><span class="p">,</span>
-    <span class="n">day</span><span class="p">,</span>
-    <span class="n">part</span><span class="p">,</span>
-    <span class="n">session</span><span class="p">,</span>
-    <span class="n">output</span>
-<span class="p">)</span>
+    <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">output</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </pre></div>
 
 
 <p>Submit solution output to a advent of code server</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">submit_output</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">part</span>, <span class="nv">session</span>, <span class="nv">output</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">submit_output</span><span class="ss">(</span><span class="nv">year</span>: <span class="nv">int</span>, <span class="nv">day</span>: <span class="nv">int</span>, <span class="nv">part</span>: <span class="nv">int</span>, <span class="nv">session</span>: <span class="nv">str</span>, <span class="nv">output</span>: <span class="nv">str</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">str</span>:
 
     <span class="s2">&quot;&quot;&quot;</span><span class="s">Submit solution output to a advent of code server</span><span class="s2">&quot;&quot;&quot;</span>
 
