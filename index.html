@@ -230,9 +230,58 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+      </label>
+    
     <a href="." title="Home" class="md-nav__link md-nav__link--active">
       Home
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -410,6 +459,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage_1" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -442,6 +527,55 @@
 </tr>
 </tbody>
 </table>
+<h2 id="usage">Usage</h2>
+<h3 id="installation">Installation</h3>
+<p>To install out advent-of-code run out following command which install out advent-of-code cli and advent_of_code library.</p>
+<div class="codehilite"><pre><span></span>poetry add --git<span class="o">=</span>https://github.com/iamsauravsharma/advent-of-code
+</pre></div>
+
+
+<h3 id="usage_1">Usage</h3>
+<p>Initially for advent-of-code to work out it need session value or session ID which you can obtain out by viewing out cookie while visiting advent of code server.
+After collecting session cookie value you need to add those value in config using advent-of-code CLI</p>
+<div class="codehilite"><pre><span></span>advent-of-code config add &lt;session-name&gt; &lt;session-value&gt;
+</pre></div>
+
+
+<p>Now you can import out library by using</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">advent_of_code</span>
+</pre></div>
+
+
+<p>After importing a library you can now use out either two decorator solve or submit decorator for a function of puzzle</p>
+<p>For example:-</p>
+<div class="codehilite"><pre><span></span><span class="nd">@advent_of_code.submit</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">session</span><span class="o">=</span><span class="s2">&quot;&lt;session-name&gt;&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">puzzle_2018_3_10</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+    <span class="c1"># do some calculation</span>
+    <span class="k">return</span> <span class="n">final_output</span>
+</pre></div>
+
+
+<p>Now after decorating out function now you can call out function</p>
+<div class="codehilite"><pre><span></span><span class="n">puzzle_2018_3_10</span><span class="p">()</span>
+</pre></div>
+
+
+<p>After calling out function <code>final_output</code> value will be submitted out to advent-of-code server for 2018 year day 3
+problem then returns out whether submitted answer was correct or not. If session value is not provided then
+solution will be submitted to all session value set out.</p>
+<p>You can also use out advent-of-code builtin Initializer and runner to create out appropriate CLI
+tool for problem so problem can be run easily
+To set advent-of-code puzzle as CLI</p>
+<div class="codehilite"><pre><span></span><span class="nd">@advent_of_code.adventrunner</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">main_cli</span><span class="p">():</span>
+    <span class="n">initializer</span> <span class="o">=</span> <span class="n">advent_of_code</span><span class="o">.</span><span class="n">Initializer</span><span class="p">()</span>
+    <span class="n">initializer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;&lt;function_alias&gt;&quot;</span><span class="o">=</span><span class="s2">&quot;&lt;function&gt;&quot;</span><span class="p">)</span>
+    <span class="c1"># add other function</span>
+    <span class="k">return</span> <span class="n">initializer</span>
+</pre></div>
+
+
+<p>Now you can set out main_cli as entry points and it will create out CLI with appropriate name and function which was added.</p>
                 
                   
                 
