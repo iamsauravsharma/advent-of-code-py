@@ -952,25 +952,25 @@
 
 
 <p>Return all session name</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">get_all_session</span><span class="ss">()</span> <span class="o">-&gt;</span> <span class="nv">List</span>[<span class="nv">str</span>]:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span><span class="w"> </span><span class="n">get_all_session</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">str</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
 
-    <span class="s2">&quot;&quot;&quot;</span><span class="s">Return all session name</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;Return all session name&quot;&quot;&quot;</span><span class="w"></span>
 
-    <span class="nv">config_file</span> <span class="o">=</span> <span class="nv">_config_file_data</span><span class="ss">()</span>
+<span class="w">    </span><span class="n">config_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_config_file_data</span><span class="p">()</span><span class="w"></span>
 
-    <span class="nv">data</span> <span class="o">=</span> <span class="nv">_read_json_file</span><span class="ss">(</span><span class="nv">config_file</span><span class="ss">)</span>
+<span class="w">    </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_read_json_file</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span><span class="w"></span>
 
-    <span class="nv">json_dict</span> <span class="o">=</span> <span class="nv">json</span>.<span class="nv">loads</span><span class="ss">(</span><span class="nv">data</span>.<span class="nv">to_json</span><span class="ss">())</span>
+<span class="w">    </span><span class="n">json_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="k">data</span><span class="p">.</span><span class="n">to_json</span><span class="p">())</span><span class="w"></span>
 
-    <span class="nv">json_data</span> <span class="o">=</span> <span class="nv">json_dict</span>.<span class="nv">get</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">session_list</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="w">    </span><span class="n">json_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;session_list&quot;</span><span class="p">)</span><span class="w"></span>
 
-    <span class="nv">session_list</span> <span class="o">=</span> <span class="nv">list</span><span class="ss">(</span><span class="nv">json_data</span>.<span class="nv">keys</span><span class="ss">())</span>
+<span class="w">    </span><span class="n">session_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="n">json_data</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="nv">session_list</span>:
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nl">session_list</span><span class="p">:</span><span class="w"></span>
 
-        <span class="k">return</span> <span class="nv">session_list</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">session_list</span><span class="w"></span>
 
-    <span class="nv">raise</span> <span class="nv">Exception</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">No session value is set</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="w">    </span><span class="n">raise</span><span class="w"> </span><span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;No session value is set&quot;</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 
 
@@ -983,25 +983,25 @@
 
 
 <p>Return session name value from JSON config file</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">get_session_value</span><span class="ss">(</span><span class="nv">session_name</span>: <span class="nv">str</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">str</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span> <span class="n">get_session_value</span><span class="p">(</span><span class="n">session_name</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">str</span><span class="p">:</span>
 
-    <span class="s2">&quot;&quot;&quot;</span><span class="s">Return session name value from JSON config file</span><span class="s2">&quot;&quot;&quot;</span>
+    <span class="ss">&quot;&quot;&quot;Return session name value from JSON config file&quot;&quot;&quot;</span>
 
-    <span class="nv">config_file</span> <span class="o">=</span> <span class="nv">_config_file_data</span><span class="ss">()</span>
+    <span class="n">config_file</span> <span class="o">=</span> <span class="n">_config_file_data</span><span class="p">()</span>
 
-    <span class="nv">data</span> <span class="o">=</span> <span class="nv">_read_json_file</span><span class="ss">(</span><span class="nv">config_file</span><span class="ss">)</span>
+    <span class="k">data</span> <span class="o">=</span> <span class="n">_read_json_file</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
 
-    <span class="nv">json_dict</span> <span class="o">=</span> <span class="nv">json</span>.<span class="nv">loads</span><span class="ss">(</span><span class="nv">data</span>.<span class="nv">to_json</span><span class="ss">())</span>
+    <span class="n">json_dict</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="k">data</span><span class="p">.</span><span class="n">to_json</span><span class="p">())</span>
 
-    <span class="nv">json_data</span> <span class="o">=</span> <span class="nv">json_dict</span>.<span class="nv">get</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">session_list</span><span class="s2">&quot;</span><span class="ss">)</span>
+    <span class="n">json_data</span> <span class="o">=</span> <span class="n">json_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;session_list&quot;</span><span class="p">)</span>
 
-    <span class="nv">session_value</span> <span class="o">=</span> <span class="nv">json_data</span>.<span class="nv">get</span><span class="ss">(</span><span class="nv">session_name</span><span class="ss">)</span>
+    <span class="n">session_value</span> <span class="o">=</span> <span class="n">json_data</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">session_name</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="nv">session_value</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">None</span>:
+    <span class="k">if</span> <span class="n">session_value</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span><span class="p">:</span>
 
-        <span class="k">return</span> <span class="nv">session_value</span>
+        <span class="k">return</span> <span class="n">session_value</span>
 
-    <span class="nv">raise</span> <span class="nv">Exception</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">{} key is not present in config file</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">session_name</span><span class="ss">))</span>
+    <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;{} key is not present in config file&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">session_name</span><span class="p">))</span>
 </pre></div>
 
 
@@ -1014,21 +1014,21 @@
 
 
 <p>List all session from a JSON file along with value</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">list_from_json</span><span class="ss">()</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span> <span class="n">list_from_json</span><span class="p">():</span>
 
-    <span class="s2">&quot;&quot;&quot;</span><span class="s">List all session from a JSON file along with value</span><span class="s2">&quot;&quot;&quot;</span>
+    <span class="ss">&quot;&quot;&quot;List all session from a JSON file along with value&quot;&quot;&quot;</span>
 
-    <span class="nv">config_file</span> <span class="o">=</span> <span class="nv">_config_file_data</span><span class="ss">()</span>
+    <span class="n">config_file</span> <span class="o">=</span> <span class="n">_config_file_data</span><span class="p">()</span>
 
-    <span class="nv">data</span> <span class="o">=</span> <span class="nv">_read_json_file</span><span class="ss">(</span><span class="nv">config_file</span><span class="ss">)</span>
+    <span class="k">data</span> <span class="o">=</span> <span class="n">_read_json_file</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
 
-    <span class="nv">json_dict</span> <span class="o">=</span> <span class="nv">json</span>.<span class="nv">loads</span><span class="ss">(</span><span class="nv">data</span>.<span class="nv">to_json</span><span class="ss">())</span>
+    <span class="n">json_dict</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="k">data</span><span class="p">.</span><span class="n">to_json</span><span class="p">())</span>
 
-    <span class="nv">json_data</span> <span class="o">=</span> <span class="nv">json_dict</span>.<span class="nv">get</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">session_list</span><span class="s2">&quot;</span><span class="ss">)</span>
+    <span class="n">json_data</span> <span class="o">=</span> <span class="n">json_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;session_list&quot;</span><span class="p">)</span>
 
-    <span class="k">for</span> <span class="nv">key</span>, <span class="nv">val</span> <span class="nv">in</span> <span class="nv">json_data</span>.<span class="nv">items</span><span class="ss">()</span>:
+    <span class="k">for</span> <span class="k">key</span><span class="p">,</span> <span class="n">val</span> <span class="k">in</span> <span class="n">json_data</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
 
-        <span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">{} = {}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">key</span>, <span class="nv">val</span><span class="ss">))</span>
+        <span class="n">print</span><span class="p">(</span><span class="ss">&quot;{} = {}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="k">key</span><span class="p">,</span> <span class="n">val</span><span class="p">))</span>
 </pre></div>
 
 
@@ -1042,51 +1042,51 @@
 
 
 <p>Class to store data about a config file of advent-of-code</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">class</span> <span class="nv">Data</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="k">Data</span><span class="err">:</span><span class="w"></span>
 
-    <span class="s2">&quot;&quot;&quot;</span><span class="s">Class to store data about a config file of advent-of-code</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;Class to store data about a config file of advent-of-code&quot;&quot;&quot;</span><span class="w"></span>
 
-    <span class="nv">def</span> <span class="nv">__init__</span><span class="ss">(</span><span class="nv">self</span>, <span class="o">**</span><span class="nv">kwargs</span>: <span class="nv">str</span><span class="ss">)</span>:
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">kwargs</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Initialize Data class</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;Initialize Data class&quot;&quot;&quot;</span><span class="w"></span>
 
-        <span class="nv">self</span>.<span class="nv">session_list</span> <span class="o">=</span> <span class="nv">kwargs</span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">session_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kwargs</span><span class="w"></span>
 
-    <span class="nv">def</span> <span class="nv">to_json</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">str</span>:
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">to_json</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nf">str</span><span class="err">:</span><span class="w"></span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Convert Data to JSON type</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;Convert Data to JSON type&quot;&quot;&quot;</span><span class="w"></span>
 
-        <span class="k">return</span> <span class="nv">json</span>.<span class="nv">dumps</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">__dict__</span>, <span class="nv">indent</span><span class="o">=</span><span class="mi">4</span>, <span class="nv">sort_keys</span><span class="o">=</span><span class="nv">True</span><span class="ss">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">__dict__</span><span class="p">,</span><span class="w"> </span><span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">sort_keys</span><span class="o">=</span><span class="k">True</span><span class="p">)</span><span class="w"></span>
 
-    @<span class="nv">classmethod</span>
+<span class="w">    </span><span class="nv">@classmethod</span><span class="w"></span>
 
-    <span class="nv">def</span> <span class="nv">from_json</span><span class="ss">(</span><span class="nv">cls</span>, <span class="nv">json_str</span><span class="ss">)</span>:
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">from_json</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span><span class="w"> </span><span class="n">json_str</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Create Data type from JSON</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;Create Data type from JSON&quot;&quot;&quot;</span><span class="w"></span>
 
-        <span class="nv">json_dict</span> <span class="o">=</span> <span class="nv">json</span>.<span class="nv">loads</span><span class="ss">(</span><span class="nv">json_str</span><span class="ss">)</span>
+<span class="w">        </span><span class="n">json_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span><span class="w"></span>
 
-        <span class="nv">json_data</span> <span class="o">=</span> <span class="nv">json_dict</span>.<span class="nv">get</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">session_list</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="w">        </span><span class="n">json_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;session_list&quot;</span><span class="p">)</span><span class="w"></span>
 
-        <span class="k">return</span> <span class="nv">cls</span><span class="ss">(</span><span class="o">**</span><span class="nv">json_data</span><span class="ss">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">cls</span><span class="p">(</span><span class="o">**</span><span class="n">json_data</span><span class="p">)</span><span class="w"></span>
 
-    <span class="nv">def</span> <span class="nv">add_session</span><span class="ss">(</span><span class="nv">self</span>, <span class="o">**</span><span class="nv">kwargs</span>: <span class="nv">str</span><span class="ss">)</span>:
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">add_session</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nl">kwargs</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Add new session or update session in a config file Data type.</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;Add new session or update session in a config file Data type.&quot;&quot;&quot;</span><span class="w"></span>
 
-        <span class="nv">self</span>.<span class="nv">session_list</span>.<span class="nv">update</span><span class="ss">(</span><span class="nv">kwargs</span><span class="ss">)</span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">session_list</span><span class="p">.</span><span class="k">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span><span class="w"></span>
 
-    <span class="nv">def</span> <span class="nv">delete_session</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">session</span>: <span class="nv">str</span><span class="ss">)</span>:
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">delete_session</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="k">session</span><span class="err">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Delete Session from config files</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;Delete Session from config files&quot;&quot;&quot;</span><span class="w"></span>
 
-        <span class="nv">try</span>:
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
 
-            <span class="nv">self</span>.<span class="nv">session_list</span>.<span class="nv">pop</span><span class="ss">(</span><span class="nv">session</span><span class="ss">)</span>
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">session_list</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="k">session</span><span class="p">)</span><span class="w"></span>
 
-        <span class="nv">except</span> <span class="nv">KeyError</span>:
+<span class="w">        </span><span class="ow">except</span><span class="w"> </span><span class="nl">KeyError</span><span class="p">:</span><span class="w"></span>
 
-            <span class="nv">raise</span> <span class="nv">Exception</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Value with name {} not found over config</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span><span class="nv">session</span><span class="ss">))</span>
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;Value with name {} not found over config&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="k">session</span><span class="p">))</span><span class="w"></span>
 </pre></div>
 
 
@@ -1101,17 +1101,17 @@
 
 
 <p>Create Data type from JSON</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    @<span class="nv">classmethod</span>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="w">    </span><span class="nv">@classmethod</span><span class="w"></span>
 
-    <span class="nv">def</span> <span class="nv">from_json</span><span class="ss">(</span><span class="nv">cls</span>, <span class="nv">json_str</span><span class="ss">)</span>:
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">from_json</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span><span class="w"> </span><span class="n">json_str</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Create Data type from JSON</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;Create Data type from JSON&quot;&quot;&quot;</span><span class="w"></span>
 
-        <span class="nv">json_dict</span> <span class="o">=</span> <span class="nv">json</span>.<span class="nv">loads</span><span class="ss">(</span><span class="nv">json_str</span><span class="ss">)</span>
+<span class="w">        </span><span class="n">json_dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span><span class="w"></span>
 
-        <span class="nv">json_data</span> <span class="o">=</span> <span class="nv">json_dict</span>.<span class="nv">get</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">session_list</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="w">        </span><span class="n">json_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">json_dict</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;session_list&quot;</span><span class="p">)</span><span class="w"></span>
 
-        <span class="k">return</span> <span class="nv">cls</span><span class="ss">(</span><span class="o">**</span><span class="nv">json_data</span><span class="ss">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">cls</span><span class="p">(</span><span class="o">**</span><span class="n">json_data</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 
 
@@ -1167,11 +1167,11 @@
 
 
 <p>Convert Data to JSON type</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="nv">def</span> <span class="nv">to_json</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span> <span class="o">-&gt;</span> <span class="nv">str</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="n">def</span> <span class="n">to_json</span><span class="p">(</span><span class="k">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">str</span><span class="p">:</span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Convert Data to JSON type</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="ss">&quot;&quot;&quot;Convert Data to JSON type&quot;&quot;&quot;</span>
 
-        <span class="k">return</span> <span class="nv">json</span>.<span class="nv">dumps</span><span class="ss">(</span><span class="nv">self</span>.<span class="nv">__dict__</span>, <span class="nv">indent</span><span class="o">=</span><span class="mi">4</span>, <span class="nv">sort_keys</span><span class="o">=</span><span class="nv">True</span><span class="ss">)</span>
+        <span class="k">return</span> <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">__dict__</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
 </pre></div>
 
 

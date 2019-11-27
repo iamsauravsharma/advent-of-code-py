@@ -571,57 +571,57 @@
 tool creation. Function which is decorated using a advent of code runner should
 return out a Initializer class so it can create out a CLI from Initializer class
 object</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">adventrunner</span><span class="ss">(</span><span class="nv">func</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span><span class="w"> </span><span class="n">adventrunner</span><span class="p">(</span><span class="n">func</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-    <span class="s2">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
 
-    <span class="nv">Advent</span> <span class="nv">of</span> <span class="nv">code</span> <span class="nv">runner</span> <span class="nv">decorator</span> <span class="nv">which</span> <span class="nv">decorate</span> <span class="nv">out</span> <span class="nv">a</span> <span class="nv">function</span> <span class="k">for</span> <span class="nv">a</span> <span class="nv">simple</span> <span class="nv">CLI</span>
+<span class="ss">    Advent of code runner decorator which decorate out a function for a simple CLI</span>
 
-    <span class="nv">tool</span> <span class="nv">creation</span>. <span class="nv">Function</span> <span class="nv">which</span> <span class="nv">is</span> <span class="nv">decorated</span> <span class="nv">using</span> <span class="nv">a</span> <span class="nv">advent</span> <span class="nv">of</span> <span class="nv">code</span> <span class="nv">runner</span> <span class="nv">should</span>
+<span class="ss">    tool creation. Function which is decorated using a advent of code runner should</span>
 
-    <span class="k">return</span> <span class="nv">out</span> <span class="nv">a</span> <span class="nv">Initializer</span> <span class="nv">class</span> <span class="nv">so</span> <span class="nv">it</span> <span class="nv">can</span> <span class="nv">create</span> <span class="nv">out</span> <span class="nv">a</span> <span class="nv">CLI</span> <span class="nv">from</span> <span class="nv">Initializer</span> <span class="nv">class</span>
+<span class="ss">    return out a Initializer class so it can create out a CLI from Initializer class</span>
 
-    <span class="nv">object</span>
+<span class="ss">    object</span>
 
-    <span class="s2">&quot;&quot;&quot;</span>
+<span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
 
-    <span class="nv">def</span> <span class="nv">create_command</span><span class="ss">()</span>:
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">create_command</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
 
-        <span class="nv">initializer_defined</span> <span class="o">=</span> <span class="nv">func</span><span class="ss">()</span>
+<span class="w">        </span><span class="n">initializer_defined</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">func</span><span class="p">()</span><span class="w"></span>
 
-        @<span class="nv">click</span>.<span class="nv">group</span><span class="ss">(</span><span class="nv">help</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">CLI tool created from a provided Initializer Object</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="w">        </span><span class="nv">@click</span><span class="p">.</span><span class="k">group</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="ss">&quot;CLI tool created from a provided Initializer Object&quot;</span><span class="p">)</span><span class="w"></span>
 
-        <span class="nv">def</span> <span class="nv">main</span><span class="ss">()</span>:
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
 
-            <span class="nv">pass</span>
+<span class="w">            </span><span class="n">pass</span><span class="w"></span>
 
-        @<span class="nv">main</span>.<span class="nv">command</span><span class="ss">(</span>
+<span class="w">        </span><span class="nv">@main</span><span class="p">.</span><span class="n">command</span><span class="p">(</span><span class="w"></span>
 
-            <span class="s2">&quot;</span><span class="s">run</span><span class="s2">&quot;</span>, <span class="nv">help</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">run a certain function by name present in Initializer</span><span class="s2">&quot;</span>
+<span class="w">            </span><span class="ss">&quot;run&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">help</span><span class="o">=</span><span class="ss">&quot;run a certain function by name present in Initializer&quot;</span><span class="w"></span>
 
-        <span class="ss">)</span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
 
-        @<span class="nv">click</span>.<span class="nv">argument</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">name</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="w">        </span><span class="nv">@click</span><span class="p">.</span><span class="n">argument</span><span class="p">(</span><span class="ss">&quot;name&quot;</span><span class="p">)</span><span class="w"></span>
 
-        <span class="nv">def</span> <span class="nv">run_function</span><span class="ss">(</span><span class="nv">name</span><span class="ss">)</span>:
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">run_function</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-            <span class="nv">initializer_defined</span>.<span class="nv">run</span><span class="ss">(</span><span class="nv">name</span><span class="ss">)</span>
+<span class="w">            </span><span class="n">initializer_defined</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"></span>
 
-        @<span class="nv">main</span>.<span class="nv">command</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">all</span><span class="s2">&quot;</span>, <span class="nv">help</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">run all function defined in a Initializer class</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="w">        </span><span class="nv">@main</span><span class="p">.</span><span class="n">command</span><span class="p">(</span><span class="ss">&quot;all&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">help</span><span class="o">=</span><span class="ss">&quot;run all function defined in a Initializer class&quot;</span><span class="p">)</span><span class="w"></span>
 
-        <span class="nv">def</span> <span class="nv">run_all_function</span><span class="ss">()</span>:
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">run_all_function</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
 
-            <span class="nv">initializer_defined</span>.<span class="nv">run_all</span><span class="ss">()</span>
+<span class="w">            </span><span class="n">initializer_defined</span><span class="p">.</span><span class="n">run_all</span><span class="p">()</span><span class="w"></span>
 
-        @<span class="nv">main</span>.<span class="nv">command</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">list</span><span class="s2">&quot;</span>, <span class="nv">help</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">list out all of the available function</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="w">        </span><span class="nv">@main</span><span class="p">.</span><span class="n">command</span><span class="p">(</span><span class="ss">&quot;list&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">help</span><span class="o">=</span><span class="ss">&quot;list out all of the available function&quot;</span><span class="p">)</span><span class="w"></span>
 
-        <span class="nv">def</span> <span class="nv">list_functions</span><span class="ss">()</span>:
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">list_functions</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
 
-            <span class="nv">initializer_defined</span>.<span class="nv">list_functions</span><span class="ss">()</span>
+<span class="w">            </span><span class="n">initializer_defined</span><span class="p">.</span><span class="n">list_functions</span><span class="p">()</span><span class="w"></span>
 
-        <span class="k">return</span> <span class="nv">main</span><span class="ss">()</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"></span>
 
-    <span class="k">return</span> <span class="nv">create_command</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">create_command</span><span class="w"></span>
 </pre></div>
 
 

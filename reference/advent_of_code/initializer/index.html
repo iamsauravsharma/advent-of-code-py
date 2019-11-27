@@ -688,57 +688,57 @@ function runner</p>
 Initialize create out a basic class which is used for adding of different
 function of advent of code solution so all of functions can be easily run with
 one simple CLI tool.</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">class</span> <span class="nv">Initializer</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">class</span> <span class="n">Initializer</span><span class="p">:</span>
 
     <span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="nv">Initialize</span> <span class="nv">class</span> <span class="nv">which</span> <span class="nv">is</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">initialize</span> <span class="nv">an</span> <span class="nv">advent</span> <span class="nv">of</span> <span class="nv">code</span> <span class="nv">function</span> <span class="nv">runner</span>.
+<span class="s2">    Initialize class which is used to initialize an advent of code function runner.</span>
 
-    <span class="nv">Initialize</span> <span class="nv">create</span> <span class="nv">out</span> <span class="nv">a</span> <span class="nv">basic</span> <span class="nv">class</span> <span class="nv">which</span> <span class="nv">is</span> <span class="nv">used</span> <span class="k">for</span> <span class="nv">adding</span> <span class="nv">of</span> <span class="nv">different</span>
+<span class="s2">    Initialize create out a basic class which is used for adding of different</span>
 
-    <span class="nv">function</span> <span class="nv">of</span> <span class="nv">advent</span> <span class="nv">of</span> <span class="nv">code</span> <span class="nv">solution</span> <span class="nv">so</span> <span class="nv">all</span> <span class="nv">of</span> <span class="nv">functions</span> <span class="nv">can</span> <span class="nv">be</span> <span class="nv">easily</span> <span class="nv">run</span> <span class="nv">with</span>
+<span class="s2">    function of advent of code solution so all of functions can be easily run with</span>
 
-    <span class="nv">one</span> <span class="nv">simple</span> <span class="nv">CLI</span> <span class="nv">tool</span>.
+<span class="s2">    one simple CLI tool.</span>
 
-    <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &quot;&quot;&quot;</span>
 
-    <span class="nv">function_list</span> <span class="o">=</span> {}
+    <span class="n">function_list</span> <span class="o">=</span> <span class="err">{}</span>
 
-    <span class="nv">def</span> <span class="nv">add</span><span class="ss">(</span><span class="nv">self</span>, <span class="o">**</span><span class="nv">kwargs</span><span class="ss">)</span>:
+    <span class="n">def</span> <span class="k">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Add a function to a Initializer class</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="s2">&quot;&quot;&quot;Add a function to a Initializer class&quot;&quot;&quot;</span>
 
-        <span class="nv">self</span>.<span class="nv">function_list</span>.<span class="nv">update</span><span class="ss">(</span><span class="nv">kwargs</span><span class="ss">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="nv">def</span> <span class="nv">run</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">function_alias</span>: <span class="nv">str</span><span class="ss">)</span>:
+    <span class="n">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">function_alias</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Run a certain function by their name/alias</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="s2">&quot;&quot;&quot;Run a certain function by their name/alias&quot;&quot;&quot;</span>
 
-        <span class="nv">self</span>.<span class="nv">function_list</span>.<span class="nv">get</span><span class="ss">(</span><span class="nv">function_alias</span><span class="ss">)()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">function_alias</span><span class="p">)()</span>
 
-    <span class="nv">def</span> <span class="nv">run_all</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
+    <span class="n">def</span> <span class="nf">run_all</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Run all functions which are added to `Initializer`</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="s2">&quot;&quot;&quot;Run all functions which are added to `Initializer`&quot;&quot;&quot;</span>
 
-        <span class="k">for</span> <span class="nv">value</span> <span class="nv">in</span> <span class="nv">self</span>.<span class="nv">function_list</span>.<span class="nv">values</span><span class="ss">()</span>:
+        <span class="k">for</span> <span class="n">value</span> <span class="k">in</span> <span class="n">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">values</span><span class="p">():</span>
 
-            <span class="nv">value</span><span class="ss">()</span>
+            <span class="nf">value</span><span class="p">()</span>
 
-    <span class="nv">def</span> <span class="nv">list_functions</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
+    <span class="n">def</span> <span class="nf">list_functions</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">List out all of the function and its location along with its alias</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="s2">&quot;&quot;&quot;List out all of the function and its location along with its alias&quot;&quot;&quot;</span>
 
-        <span class="k">for</span> <span class="ss">(</span><span class="nv">keys</span>, <span class="nv">value</span><span class="ss">)</span> <span class="nv">in</span> <span class="nv">self</span>.<span class="nv">function_list</span>.<span class="nv">items</span><span class="ss">()</span>:
+        <span class="k">for</span> <span class="p">(</span><span class="k">keys</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="n">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
 
-            <span class="nv">print</span><span class="ss">(</span>
+            <span class="nf">print</span><span class="p">(</span>
 
-                <span class="s2">&quot;</span><span class="s">{:10} -&gt; {}.{}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span>
+                <span class="s2">&quot;{:10} -&gt; {}.{}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span>
 
-                    <span class="nv">keys</span>, <span class="nv">inspect</span>.<span class="nv">getmodule</span><span class="ss">(</span><span class="nv">value</span><span class="ss">)</span>.<span class="nv">__name__</span>, <span class="nv">value</span>.<span class="nv">__name__</span>
+                    <span class="k">keys</span><span class="p">,</span> <span class="n">inspect</span><span class="p">.</span><span class="nf">getmodule</span><span class="p">(</span><span class="n">value</span><span class="p">).</span><span class="n">__name__</span><span class="p">,</span> <span class="n">value</span><span class="p">.</span><span class="n">__name__</span>
 
-                <span class="ss">)</span>
+                <span class="p">)</span>
 
-            <span class="ss">)</span>
+            <span class="p">)</span>
 </pre></div>
 
 
@@ -776,21 +776,21 @@ one simple CLI tool.</p>
 
 
 <p>List out all of the function and its location along with its alias</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="nv">def</span> <span class="nv">list_functions</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="n">def</span> <span class="n">list_functions</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">List out all of the function and its location along with its alias</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="ss">&quot;&quot;&quot;List out all of the function and its location along with its alias&quot;&quot;&quot;</span>
 
-        <span class="k">for</span> <span class="ss">(</span><span class="nv">keys</span>, <span class="nv">value</span><span class="ss">)</span> <span class="nv">in</span> <span class="nv">self</span>.<span class="nv">function_list</span>.<span class="nv">items</span><span class="ss">()</span>:
+        <span class="k">for</span> <span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="k">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
 
-            <span class="nv">print</span><span class="ss">(</span>
+            <span class="n">print</span><span class="p">(</span>
 
-                <span class="s2">&quot;</span><span class="s">{:10} -&gt; {}.{}</span><span class="s2">&quot;</span>.<span class="nv">format</span><span class="ss">(</span>
+                <span class="ss">&quot;{:10} -&gt; {}.{}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span>
 
-                    <span class="nv">keys</span>, <span class="nv">inspect</span>.<span class="nv">getmodule</span><span class="ss">(</span><span class="nv">value</span><span class="ss">)</span>.<span class="nv">__name__</span>, <span class="nv">value</span>.<span class="nv">__name__</span>
+                    <span class="n">keys</span><span class="p">,</span> <span class="n">inspect</span><span class="p">.</span><span class="n">getmodule</span><span class="p">(</span><span class="n">value</span><span class="p">).</span><span class="n">__name__</span><span class="p">,</span> <span class="n">value</span><span class="p">.</span><span class="n">__name__</span>
 
-                <span class="ss">)</span>
+                <span class="p">)</span>
 
-            <span class="ss">)</span>
+            <span class="p">)</span>
 </pre></div>
 
 
@@ -821,13 +821,13 @@ one simple CLI tool.</p>
 
 
 <p>Run all functions which are added to <code>Initializer</code></p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="nv">def</span> <span class="nv">run_all</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="n">def</span> <span class="nf">run_all</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
 
-        <span class="s2">&quot;&quot;&quot;</span><span class="s">Run all functions which are added to `Initializer`</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="s2">&quot;&quot;&quot;Run all functions which are added to `Initializer`&quot;&quot;&quot;</span>
 
-        <span class="k">for</span> <span class="nv">value</span> <span class="nv">in</span> <span class="nv">self</span>.<span class="nv">function_list</span>.<span class="nv">values</span><span class="ss">()</span>:
+        <span class="k">for</span> <span class="n">value</span> <span class="k">in</span> <span class="n">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">values</span><span class="p">():</span>
 
-            <span class="nv">value</span><span class="ss">()</span>
+            <span class="nf">value</span><span class="p">()</span>
 </pre></div>
 
 

@@ -548,7 +548,7 @@ After collecting session cookie value you need to add those value in config usin
 
 <p>After importing a library you can now use out either two decorator solve or submit decorator for a function of puzzle</p>
 <p>For example:-</p>
-<div class="codehilite"><pre><span></span><span class="nd">@advent_of_code.submit</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">session</span><span class="o">=</span><span class="s2">&quot;&lt;session-name&gt;&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="nd">@advent_of_code</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">session</span><span class="o">=</span><span class="s2">&quot;&lt;session-name&gt;&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">puzzle_2018_3_10</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
     <span class="c1"># do some calculation</span>
     <span class="k">return</span> <span class="n">final_output</span>
@@ -566,7 +566,7 @@ solution will be submitted to all session value set out.</p>
 <p>You can also use out advent-of-code builtin Initializer and runner to create out appropriate CLI
 tool for problem so problem can be run easily
 To set advent-of-code puzzle as CLI</p>
-<div class="codehilite"><pre><span></span><span class="nd">@advent_of_code.adventrunner</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="nd">@advent_of_code</span><span class="o">.</span><span class="n">adventrunner</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">main_cli</span><span class="p">():</span>
     <span class="n">initializer</span> <span class="o">=</span> <span class="n">advent_of_code</span><span class="o">.</span><span class="n">Initializer</span><span class="p">()</span>
     <span class="n">initializer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;&lt;function_alias&gt;&quot;</span><span class="o">=</span><span class="s2">&quot;&lt;function&gt;&quot;</span><span class="p">)</span>

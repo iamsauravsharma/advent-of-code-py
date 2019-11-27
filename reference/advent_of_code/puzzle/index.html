@@ -711,31 +711,31 @@ or not. By default it downloads out input file from advent-of-code server. Puzzl
 can also be solved by using custom file location with help of input_file parameter
 while using input_file year, day, part are required even if they are not used for
 only reference purpose of printing output.</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">solve</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">part</span>, <span class="nv">session</span><span class="o">=</span><span class="nv">None</span>, <span class="nv">input_file</span><span class="o">=</span><span class="nv">None</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span> <span class="n">solve</span><span class="p">(</span><span class="k">year</span><span class="p">,</span> <span class="k">day</span><span class="p">,</span> <span class="n">part</span><span class="p">,</span> <span class="k">session</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">input_file</span><span class="o">=</span><span class="k">None</span><span class="p">):</span>
 
-    <span class="s2">&quot;&quot;&quot;</span>
+    <span class="ss">&quot;&quot;&quot;</span>
 
-    <span class="nv">Puzzle</span> <span class="nv">decorator</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">only</span> <span class="nv">solve</span> <span class="nv">a</span> <span class="nv">solution</span> <span class="o">&amp;</span> <span class="nv">print</span> <span class="nv">output</span> <span class="nv">value</span>. <span class="nv">It</span> <span class="nv">doesn</span><span class="s1">&#39;</span><span class="s">t</span>
+<span class="ss">    Puzzle decorator used to only solve a solution &amp; print output value. It doesn&#39;t</span>
 
-    <span class="nv">submit</span> <span class="nv">output</span> <span class="nv">to</span> <span class="nv">advent</span> <span class="nv">of</span> <span class="nv">code</span> <span class="nv">server</span> <span class="nv">to</span> <span class="nv">validate</span> <span class="nv">out</span> <span class="nv">whether</span> <span class="nv">an</span> <span class="nv">answer</span> <span class="nv">is</span> <span class="nv">correct</span>
+<span class="ss">    submit output to advent of code server to validate out whether an answer is correct</span>
 
-    <span class="nv">or</span> <span class="nv">not</span>. <span class="nv">By</span> <span class="nv">default</span> <span class="nv">it</span> <span class="nv">downloads</span> <span class="nv">out</span> <span class="nv">input</span> <span class="nv">file</span> <span class="nv">from</span> <span class="nv">advent</span><span class="o">-</span><span class="nv">of</span><span class="o">-</span><span class="nv">code</span> <span class="nv">server</span>. <span class="nv">Puzzle</span>
+<span class="ss">    or not. By default it downloads out input file from advent-of-code server. Puzzle</span>
 
-    <span class="nv">can</span> <span class="nv">also</span> <span class="nv">be</span> <span class="nv">solved</span> <span class="nv">by</span> <span class="nv">using</span> <span class="nv">custom</span> <span class="nv">file</span> <span class="nv">location</span> <span class="nv">with</span> <span class="nv">help</span> <span class="nv">of</span> <span class="nv">input_file</span> <span class="nv">parameter</span>
+<span class="ss">    can also be solved by using custom file location with help of input_file parameter</span>
 
-    <span class="k">while</span> <span class="nv">using</span> <span class="nv">input_file</span> <span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">part</span> <span class="nv">are</span> <span class="nv">required</span> <span class="nv">even</span> <span class="k">if</span> <span class="nv">they</span> <span class="nv">are</span> <span class="nv">not</span> <span class="nv">used</span> <span class="k">for</span>
+<span class="ss">    while using input_file year, day, part are required even if they are not used for</span>
 
-    <span class="nv">only</span> <span class="nv">reference</span> <span class="nv">purpose</span> <span class="nv">of</span> <span class="nv">printing</span> <span class="nv">output</span>.
+<span class="ss">    only reference purpose of printing output.</span>
 
-    <span class="s2">&quot;&quot;&quot;</span>
+<span class="ss">    &quot;&quot;&quot;</span>
 
-    <span class="nv">def</span> <span class="nv">_action</span><span class="ss">(</span><span class="nv">function</span><span class="ss">)</span>:
+    <span class="n">def</span> <span class="n">_action</span><span class="p">(</span><span class="k">function</span><span class="p">):</span>
 
-        <span class="nv">operation_type</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">solve</span><span class="s2">&quot;</span>
+        <span class="n">operation_type</span> <span class="o">=</span> <span class="ss">&quot;solve&quot;</span>
 
-        <span class="k">return</span> <span class="nv">_Puzzle</span><span class="ss">(</span><span class="nv">function</span>, <span class="nv">operation_type</span>, <span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">part</span>, <span class="nv">session</span>, <span class="nv">input_file</span><span class="ss">)</span>
+        <span class="k">return</span> <span class="n">_Puzzle</span><span class="p">(</span><span class="k">function</span><span class="p">,</span> <span class="n">operation_type</span><span class="p">,</span> <span class="k">year</span><span class="p">,</span> <span class="k">day</span><span class="p">,</span> <span class="n">part</span><span class="p">,</span> <span class="k">session</span><span class="p">,</span> <span class="n">input_file</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="nv">_action</span>
+    <span class="k">return</span> <span class="n">_action</span>
 </pre></div>
 
 
@@ -755,27 +755,27 @@ only reference purpose of printing output.</p>
 result. If input_file is not present then it tries to download file and cache it
 for submiting solution else it require to be provided with input_file path which
 input it can use out</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">submit</span><span class="ss">(</span><span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">part</span>, <span class="nv">session</span><span class="o">=</span><span class="nv">None</span>, <span class="nv">input_file</span><span class="o">=</span><span class="nv">None</span><span class="ss">)</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span> <span class="n">submit</span><span class="p">(</span><span class="k">year</span><span class="p">,</span> <span class="k">day</span><span class="p">,</span> <span class="n">part</span><span class="p">,</span> <span class="k">session</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">input_file</span><span class="o">=</span><span class="k">None</span><span class="p">):</span>
 
-    <span class="s2">&quot;&quot;&quot;</span>
+    <span class="ss">&quot;&quot;&quot;</span>
 
-    <span class="nv">Puzzle</span> <span class="nv">decorator</span> <span class="nv">used</span> <span class="nv">to</span> <span class="nv">submit</span> <span class="nv">a</span> <span class="nv">solution</span> <span class="nv">to</span> <span class="nv">advent_of_code</span> <span class="nv">server</span> <span class="nv">and</span> <span class="nv">provide</span>
+<span class="ss">    Puzzle decorator used to submit a solution to advent_of_code server and provide</span>
 
-    <span class="nb">result</span>. <span class="k">If</span> <span class="nv">input_file</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">present</span> <span class="k">then</span> <span class="nv">it</span> <span class="nv">tries</span> <span class="nv">to</span> <span class="nv">download</span> <span class="nv">file</span> <span class="nv">and</span> <span class="nv">cache</span> <span class="nv">it</span>
+<span class="ss">    result. If input_file is not present then it tries to download file and cache it</span>
 
-    <span class="k">for</span> <span class="nv">submiting</span> <span class="nv">solution</span> <span class="k">else</span> <span class="nv">it</span> <span class="nv">require</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">provided</span> <span class="nv">with</span> <span class="nv">input_file</span> <span class="nv">path</span> <span class="nv">which</span>
+<span class="ss">    for submiting solution else it require to be provided with input_file path which</span>
 
-    <span class="nv">input</span> <span class="nv">it</span> <span class="nv">can</span> <span class="nv">use</span> <span class="nv">out</span>
+<span class="ss">    input it can use out</span>
 
-    <span class="s2">&quot;&quot;&quot;</span>
+<span class="ss">    &quot;&quot;&quot;</span>
 
-    <span class="nv">def</span> <span class="nv">_action</span><span class="ss">(</span><span class="nv">function</span><span class="ss">)</span>:
+    <span class="n">def</span> <span class="n">_action</span><span class="p">(</span><span class="k">function</span><span class="p">):</span>
 
-        <span class="nv">operation_type</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">submit</span><span class="s2">&quot;</span>
+        <span class="n">operation_type</span> <span class="o">=</span> <span class="ss">&quot;submit&quot;</span>
 
-        <span class="k">return</span> <span class="nv">_Puzzle</span><span class="ss">(</span><span class="nv">function</span>, <span class="nv">operation_type</span>, <span class="nv">year</span>, <span class="nv">day</span>, <span class="nv">part</span>, <span class="nv">session</span>, <span class="nv">input_file</span><span class="ss">)</span>
+        <span class="k">return</span> <span class="n">_Puzzle</span><span class="p">(</span><span class="k">function</span><span class="p">,</span> <span class="n">operation_type</span><span class="p">,</span> <span class="k">year</span><span class="p">,</span> <span class="k">day</span><span class="p">,</span> <span class="n">part</span><span class="p">,</span> <span class="k">session</span><span class="p">,</span> <span class="n">input_file</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="nv">_action</span>
+    <span class="k">return</span> <span class="n">_action</span>
 </pre></div>
 
 

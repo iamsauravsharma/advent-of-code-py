@@ -584,23 +584,23 @@
 
 <p>Get latest year of advent of code return old year if month is not December
 otherwise return current year</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">get_current_year</span><span class="ss">()</span> <span class="o">-&gt;</span> <span class="nv">int</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span> <span class="n">get_current_year</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 
-    <span class="s2">&quot;&quot;&quot;</span>
+    <span class="ss">&quot;&quot;&quot;</span>
 
-    <span class="nv">Get</span> <span class="nv">latest</span> <span class="nv">year</span> <span class="nv">of</span> <span class="nv">advent</span> <span class="nv">of</span> <span class="nv">code</span> <span class="k">return</span> <span class="nv">old</span> <span class="nv">year</span> <span class="k">if</span> <span class="nv">month</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">December</span>
+<span class="ss">    Get latest year of advent of code return old year if month is not December</span>
 
-    <span class="nv">otherwise</span> <span class="k">return</span> <span class="nv">current</span> <span class="nv">year</span>
+<span class="ss">    otherwise return current year</span>
 
-    <span class="s2">&quot;&quot;&quot;</span>
+<span class="ss">    &quot;&quot;&quot;</span>
 
-    <span class="nv">date_time</span> <span class="o">=</span> <span class="nv">datetime</span>.<span class="nv">datetime</span>.<span class="nv">now</span><span class="ss">(</span><span class="nv">tz</span><span class="o">=</span><span class="nv">EASTERN</span><span class="ss">)</span>
+    <span class="n">date_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="n">EASTERN</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="nv">date_time</span>.<span class="nv">month</span> <span class="o">&lt;</span> <span class="mi">12</span>:
+    <span class="k">if</span> <span class="n">date_time</span><span class="p">.</span><span class="k">month</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
 
-        <span class="k">return</span> <span class="nv">date_time</span>.<span class="nv">year</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">date_time</span><span class="p">.</span><span class="k">year</span> <span class="o">-</span> <span class="mi">1</span>
 
-    <span class="k">return</span> <span class="nv">date_time</span>.<span class="nv">year</span>
+    <span class="k">return</span> <span class="n">date_time</span><span class="p">.</span><span class="k">year</span>
 </pre></div>
 
 
@@ -613,15 +613,15 @@ otherwise return current year</p>
 
 
 <p>Get latest day or set a latest day as 25 if this is not month of December</p>
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">get_day</span><span class="ss">()</span> <span class="o">-&gt;</span> <span class="nv">int</span>:
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><span class="n">def</span> <span class="n">get_day</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 
-    <span class="s2">&quot;&quot;&quot;</span><span class="s">Get latest day or set a latest day as 25 if this is not month of December</span><span class="s2">&quot;&quot;&quot;</span>
+    <span class="ss">&quot;&quot;&quot;Get latest day or set a latest day as 25 if this is not month of December&quot;&quot;&quot;</span>
 
-    <span class="nv">date_time</span> <span class="o">=</span> <span class="nv">datetime</span>.<span class="nv">datetime</span>.<span class="nv">now</span><span class="ss">(</span><span class="nv">tz</span><span class="o">=</span><span class="nv">EASTERN</span><span class="ss">)</span>
+    <span class="n">date_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="n">EASTERN</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="nv">date_time</span>.<span class="nv">month</span> <span class="o">==</span> <span class="mi">12</span>:
+    <span class="k">if</span> <span class="n">date_time</span><span class="p">.</span><span class="k">month</span> <span class="o">==</span> <span class="mi">12</span><span class="p">:</span>
 
-        <span class="k">return</span> <span class="nv">min</span><span class="ss">(</span><span class="nv">date_time</span>.<span class="nv">day</span>, <span class="mi">25</span><span class="ss">)</span>
+        <span class="k">return</span> <span class="k">min</span><span class="p">(</span><span class="n">date_time</span><span class="p">.</span><span class="k">day</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="mi">25</span>
 </pre></div>
