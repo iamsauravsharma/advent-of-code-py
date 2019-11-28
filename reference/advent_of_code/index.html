@@ -418,6 +418,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#extend" class="md-nav__link">
+    extend
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_function_list" class="md-nav__link">
+    get_function_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#list_functions" class="md-nav__link">
     list_functions
   </a>
@@ -629,6 +643,20 @@
           <li class="md-nav__item">
   <a href="#add" class="md-nav__link">
     add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extend" class="md-nav__link">
+    extend
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_function_list" class="md-nav__link">
+    get_function_list
   </a>
   
 </li>
@@ -902,6 +930,14 @@ one simple CLI tool.</p>
 
         <span class="n">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
 
+    <span class="n">def</span> <span class="nf">extend</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">another_initializer</span><span class="p">):</span>
+
+        <span class="s2">&quot;&quot;&quot;Extends initializer with addition of another initialier to it&quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="k">keys</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="n">another_initializer</span><span class="p">.</span><span class="nf">get_function_list</span><span class="p">().</span><span class="nf">items</span><span class="p">():</span>
+
+            <span class="n">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">update</span><span class="p">(</span><span class="k">keys</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
+
     <span class="n">def</span> <span class="nf">run</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">function_alias</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
 
         <span class="s2">&quot;&quot;&quot;Run a certain function by their name/alias&quot;&quot;&quot;</span>
@@ -931,6 +967,12 @@ one simple CLI tool.</p>
                 <span class="p">)</span>
 
             <span class="p">)</span>
+
+    <span class="n">def</span> <span class="nf">get_function_list</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+
+        <span class="s2">&quot;&quot;&quot;Return out all function_list which contain function_alias and function&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">function_list</span>
 </pre></div>
 
 
@@ -956,6 +998,43 @@ one simple CLI tool.</p>
         <span class="ss">&quot;&quot;&quot;Add a function to a Initializer class&quot;&quot;&quot;</span>
 
         <span class="k">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+
+
+</details>
+<h5 id="extend">extend</h5>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">extend</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">another_initializer</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>Extends initializer with addition of another initialier to it</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="n">def</span> <span class="n">extend</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">another_initializer</span><span class="p">):</span>
+
+        <span class="ss">&quot;&quot;&quot;Extends initializer with addition of another initialier to it&quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="n">another_initializer</span><span class="p">.</span><span class="n">get_function_list</span><span class="p">().</span><span class="n">items</span><span class="p">():</span>
+
+            <span class="k">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">update</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+
+
+</details>
+<h5 id="get_function_list">get_function_list</h5>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_function_list</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>Return out all function_list which contain function_alias and function</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="n">def</span> <span class="n">get_function_list</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="ss">&quot;&quot;&quot;Return out all function_list which contain function_alias and function&quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">function_list</span>
 </pre></div>
 
 
