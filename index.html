@@ -549,14 +549,14 @@ After collecting session cookie value you need to add those value in config usin
 <p>After importing a library you can now use out either two decorator solve or submit decorator for a function of puzzle</p>
 <p>For example:-</p>
 <div class="codehilite"><pre><span></span><span class="nd">@advent_of_code</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">session</span><span class="o">=</span><span class="s2">&quot;&lt;session-name&gt;&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">puzzle_2018_3_10</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">puzzle_2018_3_1</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
     <span class="c1"># do some calculation</span>
     <span class="k">return</span> <span class="n">final_output</span>
 </pre></div>
 
 
 <p>Now after decorating out function now you can call out function</p>
-<div class="codehilite"><pre><span></span><span class="n">puzzle_2018_3_10</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="n">puzzle_2018_3_1</span><span class="p">()</span>
 </pre></div>
 
 
@@ -570,12 +570,16 @@ To set advent-of-code puzzle as CLI</p>
 <span class="k">def</span> <span class="nf">main_cli</span><span class="p">():</span>
     <span class="n">initializer</span> <span class="o">=</span> <span class="n">advent_of_code</span><span class="o">.</span><span class="n">Initializer</span><span class="p">()</span>
     <span class="n">initializer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;&lt;function_alias&gt;&quot;</span><span class="o">=</span><span class="s2">&quot;&lt;function&gt;&quot;</span><span class="p">)</span>
+    <span class="c1"># for example to run above function you can write out</span>
+    <span class="n">initializer</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;2018-3-1&quot;</span><span class="o">=</span><span class="n">puzzle_2018_3_1</span><span class="p">)</span>  
     <span class="c1"># add other function</span>
     <span class="k">return</span> <span class="n">initializer</span>
 </pre></div>
 
 
-<p>Now you can set out main_cli as entry points and it will create out CLI with appropriate name and function which was added.</p>
+<p>Now you can set out main_cli as entry points and it will create out CLI with appropriate name and function which was added.
+So for example to run out function puzzle_2018_3_1() you have to run out command as <code>entry-point-name run 2018-3-1</code> which
+will run appropriate function as well as submit as desired.</p>
                 
                   
                 
