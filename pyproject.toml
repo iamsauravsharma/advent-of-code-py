@@ -8,16 +8,16 @@ multi_line_output=3
 include_trailing_comma=true
 
 [tool.poetry]
-name = "advent-of-code"
-version = "0.1.1"
-description = "Advent of code helper cli and library"
+name = "advent-of-code-py"
+version = "0.1.0"
+description = "Advent of Code helper CLI and library"
 authors = ["Saurav Sharma <appdroiddeveloper@gmail.com>"]
 readme="README.md"
 license="MIT"
-homepage="https://github.com/iamsauravsharma/advent-of-code"
-repository="https://github.com/iamsauravsharma/advent-of-code"
-documentation="https://iamsauravsharma.github.io/advent-of-code"
-keywords=["advent-of-code","aoc"]
+homepage="https://github.com/iamsauravsharma/advent-of-code-py"
+repository="https://github.com/iamsauravsharma/advent-of-code-py"
+documentation="https://iamsauravsharma.github.io/advent-of-code-py"
+keywords=["advent-of-code","aoc","aocpy","advent of code"]
 classifiers=[
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -34,17 +34,16 @@ requests="2.22.0"
 python-dateutil="2.8.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "5.3.1"
 black = "19.10b0"
 isort = "4.3.21"
 prospector = {version = "1.1.7", extras = ["with_everything"]}
 portray = "1.3.1"
 
 [tool.poetry.scripts]
-advent-of-code = "advent_of_code.cli:main"
+advent-of-code-py = "advent_of_code_py.cli:main"
 
 [tool.portray]
-modules=["advent_of_code"]
+modules=["advent_of_code_py"]
 
 [tool.portray.mkdocs.theme]
 name = "material"
