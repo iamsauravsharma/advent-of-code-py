@@ -691,7 +691,7 @@ function runner</p>
 
     <span class="k">def</span> <span class="nf">list_functions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;List out all of the function and its location along with its alias&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;List out all of the function and its alias&quot;&quot;&quot;</span>
 
         <span class="k">for</span> <span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">function_list</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
 
@@ -699,7 +699,7 @@ function runner</p>
 
                 <span class="s2">&quot;{:10} -&gt; {}.{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
 
-                    <span class="n">keys</span><span class="p">,</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmodule</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">value</span><span class="o">.</span><span class="vm">__name__</span>
+                    <span class="n">keys</span><span class="p">,</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmodule</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">getfunction</span><span class="p">())</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">value</span>
 
                 <span class="p">)</span>
 
@@ -772,7 +772,7 @@ one simple CLI tool.</p>
 
     <span class="n">def</span> <span class="nf">list_functions</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
 
-        <span class="s2">&quot;&quot;&quot;List out all of the function and its location along with its alias&quot;&quot;&quot;</span>
+        <span class="s2">&quot;&quot;&quot;List out all of the function and its alias&quot;&quot;&quot;</span>
 
         <span class="k">for</span> <span class="p">(</span><span class="k">keys</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="n">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="nf">items</span><span class="p">():</span>
 
@@ -780,7 +780,7 @@ one simple CLI tool.</p>
 
                 <span class="s2">&quot;{:10} -&gt; {}.{}&quot;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span>
 
-                    <span class="k">keys</span><span class="p">,</span> <span class="n">inspect</span><span class="p">.</span><span class="nf">getmodule</span><span class="p">(</span><span class="n">value</span><span class="p">).</span><span class="n">__name__</span><span class="p">,</span> <span class="n">value</span><span class="p">.</span><span class="n">__name__</span>
+                    <span class="k">keys</span><span class="p">,</span> <span class="n">inspect</span><span class="p">.</span><span class="nf">getmodule</span><span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="nf">getfunction</span><span class="p">()).</span><span class="n">__name__</span><span class="p">,</span> <span class="n">value</span>
 
                 <span class="p">)</span>
 
@@ -862,10 +862,10 @@ one simple CLI tool.</p>
 </pre></div>
 
 
-<p>List out all of the function and its location along with its alias</p>
+<p>List out all of the function and its alias</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span>    <span class="n">def</span> <span class="n">list_functions</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
 
-        <span class="ss">&quot;&quot;&quot;List out all of the function and its location along with its alias&quot;&quot;&quot;</span>
+        <span class="ss">&quot;&quot;&quot;List out all of the function and its alias&quot;&quot;&quot;</span>
 
         <span class="k">for</span> <span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="k">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
 
@@ -873,7 +873,7 @@ one simple CLI tool.</p>
 
                 <span class="ss">&quot;{:10} -&gt; {}.{}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span>
 
-                    <span class="n">keys</span><span class="p">,</span> <span class="n">inspect</span><span class="p">.</span><span class="n">getmodule</span><span class="p">(</span><span class="n">value</span><span class="p">).</span><span class="n">__name__</span><span class="p">,</span> <span class="n">value</span><span class="p">.</span><span class="n">__name__</span>
+                    <span class="n">keys</span><span class="p">,</span> <span class="n">inspect</span><span class="p">.</span><span class="n">getmodule</span><span class="p">(</span><span class="n">value</span><span class="p">.</span><span class="n">getfunction</span><span class="p">()).</span><span class="n">__name__</span><span class="p">,</span> <span class="n">value</span>
 
                 <span class="p">)</span>
 
