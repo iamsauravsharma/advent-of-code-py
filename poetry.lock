@@ -118,7 +118,7 @@ description = "Show coverage stats online via coveralls.io"
 name = "coveralls"
 optional = false
 python-versions = "*"
-version = "1.10.0"
+version = "1.11.0"
 
 [package.dependencies]
 coverage = ">=3.6,<6.0"
@@ -126,7 +126,7 @@ docopt = ">=0.6.1"
 requests = ">=1.0.0"
 
 [package.extras]
-yaml = ["PyYAML (>=3.10)"]
+yaml = ["PyYAML (>=3.10,<5.3)"]
 
 [[package]]
 category = "dev"
@@ -187,8 +187,8 @@ category = "dev"
 description = "Python Git Library"
 name = "gitpython"
 optional = false
-python-versions = ">=3.0, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "3.0.5"
+python-versions = ">=3.4"
+version = "3.0.7"
 
 [package.dependencies]
 gitdb2 = ">=2.0.0"
@@ -207,7 +207,7 @@ description = "A Python framework that makes developing APIs as simple as possib
 name = "hug"
 optional = false
 python-versions = ">=3.5"
-version = "2.6.0"
+version = "2.6.1"
 
 [package.dependencies]
 falcon = "2.0.0"
@@ -297,8 +297,8 @@ category = "dev"
 description = "Python implementation of Markdown."
 name = "markdown"
 optional = false
-python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
-version = "3.1.1"
+python-versions = ">=3.5"
+version = "3.2"
 
 [package.dependencies]
 setuptools = ">=36"
@@ -344,14 +344,14 @@ description = "A Material Design theme for MkDocs"
 name = "mkdocs-material"
 optional = false
 python-versions = "*"
-version = "4.6.0"
+version = "4.6.2"
 
 [package.dependencies]
 Pygments = ">=2.2"
-markdown = "<3.2"
-mkdocs = ">=1"
+markdown = ">=3.2"
+mkdocs = ">=1.0"
 mkdocs-minify-plugin = ">=0.2"
-pymdown-extensions = ">=6.2,<6.3"
+pymdown-extensions = ">=6.3"
 
 [[package]]
 category = "dev"
@@ -359,7 +359,7 @@ description = "An MkDocs plugin to minify HTML and/or JS files prior to being wr
 name = "mkdocs-minify-plugin"
 optional = false
 python-versions = ">=2.7"
-version = "0.2.1"
+version = "0.2.2"
 
 [package.dependencies]
 htmlmin = ">=0.1.4"
@@ -371,11 +371,8 @@ category = "dev"
 description = "Rolling backport of unittest.mock for all Pythons"
 name = "mock"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "3.0.5"
-
-[package.dependencies]
-six = "*"
+python-versions = ">=3.6"
+version = "4.0.1"
 
 [package.extras]
 build = ["twine", "wheel", "blurb"]
@@ -442,14 +439,6 @@ version = "1.0.1"
 Mako = ">=1.1,<2.0"
 Markdown = ">=3.0.0,<4.0.0"
 hug = ">=2.6,<3.0"
-
-[[package]]
-category = "dev"
-description = "Backport of PEP 562."
-name = "pep562"
-optional = false
-python-versions = "*"
-version = "1.0"
 
 [[package]]
 category = "dev"
@@ -661,11 +650,10 @@ description = "Extension pack for Python Markdown."
 name = "pymdown-extensions"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
-version = "6.2.1"
+version = "6.3"
 
 [package.dependencies]
-Markdown = ">=3.0.1"
-pep562 = "*"
+Markdown = ">=3.2"
 
 [[package]]
 category = "dev"
@@ -777,7 +765,7 @@ description = "Manage dynamic plugins for Python applications"
 name = "stevedore"
 optional = false
 python-versions = "*"
-version = "1.31.0"
+version = "1.32.0"
 
 [package.dependencies]
 pbr = ">=2.0.0,<2.1.0 || >2.1.0"
@@ -927,8 +915,8 @@ coverage = [
     {file = "coverage-5.0.3.tar.gz", hash = "sha256:77afca04240c40450c331fa796b3eab6f1e15c5ecf8bf2b8bee9706cd5452fef"},
 ]
 coveralls = [
-    {file = "coveralls-1.10.0-py2.py3-none-any.whl", hash = "sha256:906e07a12b2ac04b8ad782d06173975fe5ff815fe9df3bfedd2c099bc5791aec"},
-    {file = "coveralls-1.10.0.tar.gz", hash = "sha256:2da39aeaef986757653f0a442ba2bef22a8ec602c8bacbc69d39f468dfae12ec"},
+    {file = "coveralls-1.11.0-py2.py3-none-any.whl", hash = "sha256:0a102a9326933e23213f29103b08f148c97fc3128292c3aa24fae1e773940650"},
+    {file = "coveralls-1.11.0.tar.gz", hash = "sha256:b4b21b15f4a5297794b5393cc40f720ef70c50f20772325d26965d96000ce0ca"},
 ]
 docopt = [
     {file = "docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"},
@@ -966,15 +954,15 @@ gitdb2 = [
     {file = "gitdb2-2.0.6.tar.gz", hash = "sha256:1b6df1433567a51a4a9c1a5a0de977aa351a405cc56d7d35f3388bad1f630350"},
 ]
 gitpython = [
-    {file = "GitPython-3.0.5-py3-none-any.whl", hash = "sha256:c155c6a2653593ccb300462f6ef533583a913e17857cfef8fc617c246b6dc245"},
-    {file = "GitPython-3.0.5.tar.gz", hash = "sha256:9c2398ffc3dcb3c40b27324b316f08a4f93ad646d5a6328cafbb871aa79f5e42"},
+    {file = "GitPython-3.0.7-py3-none-any.whl", hash = "sha256:99c77677f31f255e130f3fed4c8e0eebb35f1a09df98ff965fff6774f71688cf"},
+    {file = "GitPython-3.0.7.tar.gz", hash = "sha256:99cd0403cecd8a13b95d2e045b9fcaa7837137fcc5ec3105f2c413305d82c143"},
 ]
 htmlmin = [
     {file = "htmlmin-0.1.12.tar.gz", hash = "sha256:50c1ef4630374a5d723900096a961cff426dff46b48f34d194a81bbe14eca178"},
 ]
 hug = [
-    {file = "hug-2.6.0-py2.py3-none-any.whl", hash = "sha256:bbe1390642e324130f60e4f7978bd6ea152d6957ed6e769ad6bc314ddaed5b9b"},
-    {file = "hug-2.6.0.tar.gz", hash = "sha256:a04cd002614e8c788d58e5dcd5b932a62e2d2c33d4bd69fd8a3d7ce4e5cf5545"},
+    {file = "hug-2.6.1-py2.py3-none-any.whl", hash = "sha256:31c8fc284f81377278629a4b94cbb619ae9ce829cdc2da9564ccc66a121046b4"},
+    {file = "hug-2.6.1.tar.gz", hash = "sha256:b0edace2acb618873779c9ce6ecf9165db54fef95c22262f5700fcdd9febaec9"},
 ]
 idna = [
     {file = "idna-2.8-py2.py3-none-any.whl", hash = "sha256:ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"},
@@ -1022,8 +1010,8 @@ mako = [
     {file = "Mako-1.1.1.tar.gz", hash = "sha256:2984a6733e1d472796ceef37ad48c26f4a984bb18119bb2dbc37a44d8f6e75a4"},
 ]
 markdown = [
-    {file = "Markdown-3.1.1-py2.py3-none-any.whl", hash = "sha256:56a46ac655704b91e5b7e6326ce43d5ef72411376588afa1dd90e881b83c7e8c"},
-    {file = "Markdown-3.1.1.tar.gz", hash = "sha256:2e50876bcdd74517e7b71f3e7a76102050edec255b3983403f1a63e7c8a41e7a"},
+    {file = "Markdown-3.2-py2.py3-none-any.whl", hash = "sha256:9c71241ec237505535eabff7a38b1307250f16cea174bb1e505c3e032f108867"},
+    {file = "Markdown-3.2.tar.gz", hash = "sha256:5ad7180c3ec16422a764568ad6409ec82460c40d1631591fa53d597033cc98bf"},
 ]
 markupsafe = [
     {file = "MarkupSafe-1.1.1-cp27-cp27m-macosx_10_6_intel.whl", hash = "sha256:09027a7803a62ca78792ad89403b1b7a73a01c8cb65909cd876f7fcebd79b161"},
@@ -1069,16 +1057,16 @@ mkdocs = [
     {file = "mkdocs-1.0.4.tar.gz", hash = "sha256:17d34329aad75d5de604b9ed4e31df3a4d235afefdc46ce7b1964fddb2e1e939"},
 ]
 mkdocs-material = [
-    {file = "mkdocs-material-4.6.0.tar.gz", hash = "sha256:b21aa2645ccb11442ea381c92d187bbc94127f50702c0d28c3fc0152fa7b29da"},
-    {file = "mkdocs_material-4.6.0-py2.py3-none-any.whl", hash = "sha256:89a8e2527ca8426c40f2213ce53513f73f54d0a32b36aef33fde6849d294e9ec"},
+    {file = "mkdocs-material-4.6.2.tar.gz", hash = "sha256:4f32bfc8f8da74abc0bc65116d7f9e3d6b2e3e2dc43b61cfaab72e151c9c0431"},
+    {file = "mkdocs_material-4.6.2-py2.py3-none-any.whl", hash = "sha256:294275c4d3f3e5711b27645b013a0afe8b22a8ace8db81099cb1403ad47b4af5"},
 ]
 mkdocs-minify-plugin = [
-    {file = "mkdocs-minify-plugin-0.2.1.tar.gz", hash = "sha256:3000a5069dd0f42f56a8aaf7fd5ea1222c67487949617e39585d6b6434b074b6"},
-    {file = "mkdocs_minify_plugin-0.2.1-py2-none-any.whl", hash = "sha256:d54fdd5be6843dd29fd7af2f7fdd20a9eb4db46f1f6bed914e03b2f58d2d488e"},
+    {file = "mkdocs-minify-plugin-0.2.2.tar.gz", hash = "sha256:181ec20a78be6aeb9e9e2477784f0e778011b10dd00d1398d0a2dd5019d5f5d0"},
+    {file = "mkdocs_minify_plugin-0.2.2-py2-none-any.whl", hash = "sha256:27b68dfa54fa6ac6c91b2f2ec2bdeaf54ccf2ad8d6433d88a4a9a05029d91388"},
 ]
 mock = [
-    {file = "mock-3.0.5-py2.py3-none-any.whl", hash = "sha256:d157e52d4e5b938c550f39eb2fd15610db062441a9c2747d3dbfa9298211d0f8"},
-    {file = "mock-3.0.5.tar.gz", hash = "sha256:83657d894c90d5681d62155c82bda9c1187827525880eda8ff5df4ec813437c3"},
+    {file = "mock-4.0.1-py3-none-any.whl", hash = "sha256:5e48d216809f6f393987ed56920305d8f3c647e6ed35407c1ff2ecb88a9e1151"},
+    {file = "mock-4.0.1.tar.gz", hash = "sha256:2a572b715f09dd2f0a583d8aeb5bb67d7ed7a8fd31d193cf1227a99c16a67bc3"},
 ]
 mypy = [
     {file = "mypy-0.761-cp35-cp35m-macosx_10_6_x86_64.whl", hash = "sha256:7f672d02fffcbace4db2b05369142e0506cdcde20cea0e07c7c2171c4fd11dd6"},
@@ -1116,10 +1104,6 @@ pbr = [
 pdocs = [
     {file = "pdocs-1.0.1-py3-none-any.whl", hash = "sha256:9c0d24fdc0e0c537be8f2418edb4f1075da46a0d749b17ea20b74e7e60124f49"},
     {file = "pdocs-1.0.1.tar.gz", hash = "sha256:23a0346f56c08ab5701ca9b14630aa1f0f32f1c29ee7efcfc8bc512cd272f89b"},
-]
-pep562 = [
-    {file = "pep562-1.0-py2.py3-none-any.whl", hash = "sha256:d2a48b178ebf5f8dd31709cc26a19808ef794561fa2fe50ea01ea2bad4d667ef"},
-    {file = "pep562-1.0.tar.gz", hash = "sha256:58cb1cc9ee63d93e62b4905a50357618d526d289919814bea1f0da8f53b79395"},
 ]
 pep8-naming = [
     {file = "pep8-naming-0.4.1.tar.gz", hash = "sha256:4eedfd4c4b05e48796f74f5d8628c068ff788b9c2b08471ad408007fc6450e5a"},
@@ -1172,8 +1156,8 @@ pylint-plugin-utils = [
     {file = "pylint_plugin_utils-0.6-py3-none-any.whl", hash = "sha256:2f30510e1c46edf268d3a195b2849bd98a1b9433229bb2ba63b8d776e1fc4d0a"},
 ]
 pymdown-extensions = [
-    {file = "pymdown-extensions-6.2.1.tar.gz", hash = "sha256:3bbe6048275f8a0d13a0fe44e0ea201e67268aa7bb40c2544eef16abbf168f7b"},
-    {file = "pymdown_extensions-6.2.1-py2.py3-none-any.whl", hash = "sha256:dce5e17b93be0572322b7d06c9a13c13a9d98694d6468277911d50ca87d26f29"},
+    {file = "pymdown-extensions-6.3.tar.gz", hash = "sha256:cb879686a586b22292899771f5e5bc3382808e92aa938f71b550ecdea709419f"},
+    {file = "pymdown_extensions-6.3-py2.py3-none-any.whl", hash = "sha256:66fae2683c7a1dac53184f7de57f51f8dad73f9ead2f453e94e85096cb811335"},
 ]
 pyroma = [
     {file = "pyroma-2.6-py2.py3-none-any.whl", hash = "sha256:351758a81e2a12c970deb73687e239636aad52795cd81429695073d59fff0699"},
@@ -1242,8 +1226,8 @@ snowballstemmer = [
     {file = "snowballstemmer-2.0.0.tar.gz", hash = "sha256:df3bac3df4c2c01363f3dd2cfa78cce2840a79b9f1c2d2de9ce8d31683992f52"},
 ]
 stevedore = [
-    {file = "stevedore-1.31.0-py2.py3-none-any.whl", hash = "sha256:01d9f4beecf0fbd070ddb18e5efb10567801ba7ef3ddab0074f54e3cd4e91730"},
-    {file = "stevedore-1.31.0.tar.gz", hash = "sha256:e0739f9739a681c7a1fda76a102b65295e96a144ccdb552f2ae03c5f0abe8a14"},
+    {file = "stevedore-1.32.0-py2.py3-none-any.whl", hash = "sha256:a4e7dc759fb0f2e3e2f7d8ffe2358c19d45b9b8297f393ef1256858d82f69c9b"},
+    {file = "stevedore-1.32.0.tar.gz", hash = "sha256:18afaf1d623af5950cc0f7e75e70f917784c73b652a34a12d90b309451b5500b"},
 ]
 toml = [
     {file = "toml-0.10.0-py2.7.egg", hash = "sha256:f1db651f9657708513243e61e6cc67d101a39bad662eaa9b5546f789338e07a3"},
