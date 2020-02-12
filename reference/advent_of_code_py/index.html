@@ -783,7 +783,7 @@ object</p>
 
 <span class="w">        </span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="nv">@click</span><span class="p">.</span><span class="n">argument</span><span class="p">(</span><span class="ss">&quot;name&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="nv">@click</span><span class="p">.</span><span class="n">argument</span><span class="p">(</span><span class="ss">&quot;name&quot;</span><span class="p">)</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nl">pylint</span><span class="p">:</span><span class="n">disable</span><span class="o">=</span><span class="n">unused</span><span class="o">-</span><span class="k">variable</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">run_function</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
@@ -791,13 +791,13 @@ object</p>
 
 <span class="w">        </span><span class="nv">@main</span><span class="p">.</span><span class="n">command</span><span class="p">(</span><span class="ss">&quot;all&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">help</span><span class="o">=</span><span class="ss">&quot;run all function defined in a Initializer class&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">run_all_function</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">run_all_function</span><span class="p">()</span><span class="err">:</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nl">pylint</span><span class="p">:</span><span class="n">disable</span><span class="o">=</span><span class="n">unused</span><span class="o">-</span><span class="k">variable</span><span class="w"></span>
 
 <span class="w">            </span><span class="n">initializer_defined</span><span class="p">.</span><span class="n">run_all</span><span class="p">()</span><span class="w"></span>
 
 <span class="w">        </span><span class="nv">@main</span><span class="p">.</span><span class="n">command</span><span class="p">(</span><span class="ss">&quot;list&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">help</span><span class="o">=</span><span class="ss">&quot;list out all of the available function&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">list_functions</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">list_functions</span><span class="p">()</span><span class="err">:</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nl">pylint</span><span class="p">:</span><span class="n">disable</span><span class="o">=</span><span class="n">unused</span><span class="o">-</span><span class="k">variable</span><span class="w"></span>
 
 <span class="w">            </span><span class="n">initializer_defined</span><span class="p">.</span><span class="n">list_functions</span><span class="p">()</span><span class="w"></span>
 
