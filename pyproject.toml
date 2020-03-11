@@ -3,22 +3,22 @@ requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
 
 [tool.isort]
-line_length=88
-multi_line_output=3
-include_trailing_comma=true
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
 
 [tool.poetry]
 name = "advent-of-code-py"
 version = "0.1.4"
 description = "Advent of Code helper CLI and library"
 authors = ["Saurav Sharma <appdroiddeveloper@gmail.com>"]
-readme="README.md"
-license="MIT"
-homepage="https://github.com/iamsauravsharma/advent-of-code-py"
-repository="https://github.com/iamsauravsharma/advent-of-code-py"
-documentation="https://iamsauravsharma.github.io/advent-of-code-py"
-keywords=["advent-of-code","aoc","aocpy","advent of code"]
-classifiers=[
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/iamsauravsharma/advent-of-code-py"
+repository = "https://github.com/iamsauravsharma/advent-of-code-py"
+documentation = "https://iamsauravsharma.github.io/advent-of-code-py"
+keywords = ["advent-of-code","aoc","aocpy","advent of code"]
+classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
@@ -28,23 +28,23 @@ classifiers=[
 
 [tool.poetry.dependencies]
 python = "^3.8"
-click = "7.0"
-appdirs="1.4.3"
-requests="2.23.0"
-python-dateutil="2.8.1"
-pydantic="1.4"
+appdirs = "1.4.3"
+click = "7.1.1"
+pydantic = "1.4"
+python-dateutil = "2.8.1"
+requests = "2.23.0"
 
 [tool.poetry.dev-dependencies]
 black = "19.10b0"
 isort = "4.3.21"
-prospector = {version = "1.2.0", extras = ["with_everything"]}
 portray = "1.3.1"
+prospector = {version = "1.2.0", extras = ["with_everything"]}
 
 [tool.poetry.scripts]
 advent-of-code-py = "advent_of_code_py.cli:main"
 
 [tool.portray]
-modules=["advent_of_code_py"]
+modules = ["advent_of_code_py"]
 
 [tool.portray.mkdocs.theme]
 name = "material"
