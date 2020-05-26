@@ -27,7 +27,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.7"
 appdirs = "^1.4.4"
 click = "^7.0"
 pydantic = "^1.4"
