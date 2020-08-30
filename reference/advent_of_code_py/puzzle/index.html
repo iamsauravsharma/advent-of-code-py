@@ -11,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.11">
     
     
       
@@ -19,14 +19,14 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.947af8d5.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.860688db.min.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.7f672a1f.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.943997b5.min.css">
       
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#000000">
       
     
     
@@ -205,15 +205,11 @@
     
     <label class="md-nav__link" for="nav-2">
       Reference
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Reference" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Reference
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -232,15 +228,11 @@
     
     <label class="md-nav__link" for="nav-2-1">
       Advent Of Code Py
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Advent Of Code Py" data-md-level="2">
       <label class="md-nav__title" for="nav-2-1">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Advent Of Code Py
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -322,9 +314,7 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Puzzle
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" title="Puzzle" class="md-nav__link md-nav__link--active">
@@ -339,9 +329,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -451,9 +439,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -530,7 +516,7 @@
 
 <span class="k">class</span> <span class="nc">_Puzzle</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Puzzle class for handling out a puzzle decorator&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Puzzle class for handling a puzzle decorator&quot;&quot;&quot;</span>
 
     <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="n">T</span><span class="p">]</span>
 
@@ -548,13 +534,13 @@
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;return repr value of class which is set to function __name__&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Return repr value of class which is set to function __name__&quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="s2">&quot;{}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">function</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">getfunction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;get out function from a class&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Get function from a class&quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">function</span>
 
@@ -668,7 +654,7 @@
 
 <span class="sd">    for submiting solution else it require to be provided with input_file path which</span>
 
-<span class="sd">    input it can use out</span>
+<span class="sd">    input it can use.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -722,9 +708,9 @@
 
 <span class="sd">    Puzzle decorator used to only solve a solution &amp; print output value. It doesn&#39;t</span>
 
-<span class="sd">    submit output to advent of code server to validate out whether an answer is correct</span>
+<span class="sd">    submit output to advent of code server to validate whether an answer is correct</span>
 
-<span class="sd">    or not. By default it downloads out input file from advent-of-code server. Puzzle</span>
+<span class="sd">    or not. By default it downloads input file from advent-of-code server. Puzzle</span>
 
 <span class="sd">    can also be solved by using custom file location with help of input_file parameter</span>
 
@@ -787,8 +773,8 @@
 
 
 <p>Puzzle decorator used to only solve a solution &amp; print output value. It doesn't
-submit output to advent of code server to validate out whether an answer is correct
-or not. By default it downloads out input file from advent-of-code server. Puzzle
+submit output to advent of code server to validate whether an answer is correct
+or not. By default it downloads input file from advent-of-code server. Puzzle
 can also be solved by using custom file location with help of input_file parameter
 while using input_file year, day, part are required even if they are not used for
 only reference purpose of printing output.</p>
@@ -810,9 +796,9 @@ only reference purpose of printing output.</p>
 
 <span class="ss">    Puzzle decorator used to only solve a solution &amp; print output value. It doesn&#39;t</span>
 
-<span class="ss">    submit output to advent of code server to validate out whether an answer is correct</span>
+<span class="ss">    submit output to advent of code server to validate whether an answer is correct</span>
 
-<span class="ss">    or not. By default it downloads out input file from advent-of-code server. Puzzle</span>
+<span class="ss">    or not. By default it downloads input file from advent-of-code server. Puzzle</span>
 
 <span class="ss">    can also be solved by using custom file location with help of input_file parameter</span>
 
@@ -871,7 +857,7 @@ only reference purpose of printing output.</p>
 <p>Puzzle decorator used to submit a solution to advent_of_code server and provide
 result. If input_file is not present then it tries to download file and cache it
 for submiting solution else it require to be provided with input_file path which
-input it can use out</p>
+input it can use.</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">submit</span><span class="p">(</span><span class="w"></span>
 
 <span class="w">    </span><span class="nf">year</span><span class="err">:</span><span class="w"> </span><span class="nc">int</span><span class="p">,</span><span class="w"></span>
@@ -894,7 +880,7 @@ input it can use out</p>
 
 <span class="ss">    for submiting solution else it require to be provided with input_file path which</span>
 
-<span class="ss">    input it can use out</span>
+<span class="ss">    input it can use.</span>
 
 <span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
 
@@ -1001,15 +987,15 @@ input it can use out</p>
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.c3dc8c49.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../../assets/javascripts/vendor.df0def68.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../../..",
           features: [],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.8e2cddea.min.js"
+            worker: "../../../assets/javascripts/worker/search.5eca75d3.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
