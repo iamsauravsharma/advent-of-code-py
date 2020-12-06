@@ -947,7 +947,6 @@ code problems easily.</p>
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Initializer&quot;</span><span class="p">,</span> <span class="s2">&quot;solve&quot;</span><span class="p">,</span> <span class="s2">&quot;submit&quot;</span><span class="p">,</span> <span class="s2">&quot;advent_runner&quot;</span><span class="p">]</span>
 </code></pre></div>
 
-
 </details>
 <h2 id="sub-modules">Sub-modules</h2>
 <ul>
@@ -966,7 +965,6 @@ code problems easily.</p>
     <span class="n">func</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Advent of code runner decorator which decorates a function for a simple CLI
 tool creation. Function which is decorated using a advent of code runner should
@@ -1022,18 +1020,16 @@ return a Initializer class so it can create a CLI from Initializer class object<
     <span class="k">return</span> <span class="n">create_command</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="solve">solve</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">solve</span><span class="p">(</span>
     <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">session_list</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">input_file</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">session_list</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">input_file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Puzzle decorator used to only solve a solution &amp; print output value. It doesn't
 submit output to advent of code server to validate whether an answer is correct
@@ -1104,18 +1100,16 @@ only reference purpose of printing output.</p>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_action</span><span class="w"></span>
 </code></pre></div>
 
-
 </details>
 <h3 id="submit">submit</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">submit</span><span class="p">(</span>
     <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">session_list</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">input_file</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">session_list</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">input_file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Puzzle decorator used to submit a solution to advent_of_code server and provide
 result. If input_file is not present then it tries to download file and cache it
@@ -1180,7 +1174,6 @@ input it can use.</p>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_action</span><span class="w"></span>
 </code></pre></div>
 
-
 </details>
 <h2 id="classes">Classes</h2>
 <h3 id="initializer">Initializer</h3>
@@ -1189,7 +1182,6 @@ input it can use.</p>
     <span class="o">**</span><span class="n">data</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Initialize class which is used to initialize an advent of code function runner.
 Initialize create a basic class which is used for adding of different
@@ -1260,7 +1252,6 @@ one simple CLI tool.</p>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">function_list</span>
 </code></pre></div>
 
-
 </details>
 <hr />
 <h4 id="ancestors-in-mro">Ancestors (in MRO)</h4>
@@ -1272,15 +1263,13 @@ one simple CLI tool.</p>
 <div class="codehilite"><pre><span></span><code><span class="n">Config</span>
 </code></pre></div>
 
-
 <h4 id="static-methods">Static methods</h4>
 <h5 id="construct">construct</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">construct</span><span class="p">(</span>
-    <span class="n">_fields_set</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ForwardRef</span><span class="p">(</span><span class="s1">&#39;SetStr&#39;</span><span class="p">),</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">_fields_set</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ForwardRef</span><span class="p">(</span><span class="s1">&#39;SetStr&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="o">**</span><span class="n">values</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
-
 
 <p>Creates a new model setting <strong>dict</strong> and <strong>fields_set</strong> from trusted or pre-validated data.
 Default values are respected, but no other validation is performed.</p>
@@ -1289,7 +1278,6 @@ Default values are respected, but no other validation is performed.</p>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
-
 
 <h5 id="parse_file">parse_file</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_file</span><span class="p">(</span>
@@ -1302,13 +1290,11 @@ Default values are respected, but no other validation is performed.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
 
-
 <h5 id="parse_obj">parse_obj</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_obj</span><span class="p">(</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
-
 
 <h5 id="parse_raw">parse_raw</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_raw</span><span class="p">(</span>
@@ -1321,29 +1307,27 @@ Default values are respected, but no other validation is performed.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
 
-
 <h5 id="schema">schema</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">schema</span><span class="p">(</span>
-    <span class="n">by_alias</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">by_alias</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">ref_template</span><span class="p">:</span> <span class="s1">&#39;unicode&#39;</span> <span class="o">=</span> <span class="s1">&#39;#/definitions/</span><span class="si">{model}</span><span class="s1">&#39;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DictStrAny&#39;</span>
 </code></pre></div>
-
 
 <h5 id="schema_json">schema_json</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">schema_json</span><span class="p">(</span>
     <span class="o">*</span><span class="p">,</span>
     <span class="n">by_alias</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">ref_template</span><span class="p">:</span> <span class="s1">&#39;unicode&#39;</span> <span class="o">=</span> <span class="s1">&#39;#/definitions/</span><span class="si">{model}</span><span class="s1">&#39;</span><span class="p">,</span>
     <span class="o">**</span><span class="n">dumps_kwargs</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;unicode&#39;</span>
 </code></pre></div>
-
 
 <h5 id="update_forward_refs">update_forward_refs</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">update_forward_refs</span><span class="p">(</span>
     <span class="o">**</span><span class="n">localns</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-
 
 <p>Try to update ForwardRefs on fields based on this Model, globalns and localns.</p>
 <h5 id="validate">validate</h5>
@@ -1352,11 +1336,9 @@ Default values are respected, but no other validation is performed.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
 
-
 <h4 id="instance-variables">Instance variables</h4>
 <div class="codehilite"><pre><span></span><code><span class="n">fields</span>
 </code></pre></div>
-
 
 <h4 id="methods">Methods</h4>
 <h5 id="add">add</h5>
@@ -1366,7 +1348,6 @@ Default values are respected, but no other validation is performed.</p>
 <span class="p">)</span>
 </code></pre></div>
 
-
 <p>Add a function to a Initializer class</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="k">add</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
@@ -1374,7 +1355,6 @@ Default values are respected, but no other validation is performed.</p>
 
         <span class="k">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
 </code></pre></div>
-
 
 </details>
 <h5 id="copy">copy</h5>
@@ -1387,7 +1367,6 @@ Default values are respected, but no other validation is performed.</p>
     <span class="n">deep</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
-
 
 <p>Duplicate a model, optionally choose which fields to include, exclude and change.</p>
 <p>:param include: fields to include in new model
@@ -1410,7 +1389,6 @@ Default values are respected, but no other validation is performed.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DictStrAny&#39;</span>
 </code></pre></div>
 
-
 <p>Generate a dictionary representation of the model, optionally specifying which fields to include or exclude.</p>
 <h5 id="extend">extend</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">extend</span><span class="p">(</span>
@@ -1418,7 +1396,6 @@ Default values are respected, but no other validation is performed.</p>
     <span class="n">another_initializer</span><span class="p">:</span> <span class="s1">&#39;Initializer&#39;</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Extends initializer with addition of another initialier to it</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">extend</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">another_initializer</span><span class="p">:</span> <span class="n">Initializer</span><span class="p">):</span>
@@ -1428,14 +1405,12 @@ Default values are respected, but no other validation is performed.</p>
         <span class="k">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">update</span><span class="p">(</span><span class="n">another_initializer</span><span class="p">.</span><span class="n">get_function_list</span><span class="p">())</span>
 </code></pre></div>
 
-
 </details>
 <h5 id="get_function_list">get_function_list</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_function_list</span><span class="p">(</span>
     <span class="bp">self</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Return all function_list which contain function_alias and function</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_function_list</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
@@ -1444,7 +1419,6 @@ Default values are respected, but no other validation is performed.</p>
 
         <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">function_list</span>
 </code></pre></div>
-
 
 </details>
 <h5 id="json">json</h5>
@@ -1458,11 +1432,10 @@ Default values are respected, but no other validation is performed.</p>
     <span class="n">exclude_unset</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">exclude_defaults</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">exclude_none</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="n">encoder</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">encoder</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="o">**</span><span class="n">dumps_kwargs</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;unicode&#39;</span>
 </code></pre></div>
-
 
 <p>Generate a JSON representation of the model, <code>include</code> and <code>exclude</code> arguments as per <code>dict()</code>.</p>
 <p><code>encoder</code> is an optional function to supply as <code>default</code> to json.dumps(), other arguments as per <code>json.dumps()</code>.</p>
@@ -1471,7 +1444,6 @@ Default values are respected, but no other validation is performed.</p>
     <span class="bp">self</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>List all of the function and its alias</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">list_functions</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
@@ -1491,7 +1463,6 @@ Default values are respected, but no other validation is performed.</p>
             <span class="p">)</span>
 </code></pre></div>
 
-
 </details>
 <h5 id="run">run</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
@@ -1499,7 +1470,6 @@ Default values are respected, but no other validation is performed.</p>
     <span class="n">function_alias</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Run a certain function by their name/alias</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">run</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">function_alias</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
@@ -1509,14 +1479,12 @@ Default values are respected, but no other validation is performed.</p>
         <span class="k">self</span><span class="p">.</span><span class="n">function_list</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">function_alias</span><span class="p">)()</span>
 </code></pre></div>
 
-
 </details>
 <h5 id="run_all">run_all</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">run_all</span><span class="p">(</span>
     <span class="bp">self</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Run all functions which are added to <code>Initializer</code></p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">run_all</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
@@ -1527,7 +1495,6 @@ Default values are respected, but no other validation is performed.</p>
 
             <span class="k">value</span><span class="p">()</span>
 </code></pre></div>
-
 
 </details>
 <h5 id="to_string">to_string</h5>

@@ -734,7 +734,6 @@
     <span class="k">return</span> <span class="n">cache_file</span>
 </code></pre></div>
 
-
 </details>
 <h2 id="functions">Functions</h2>
 <h3 id="cache_file_data">cache_file_data</h3>
@@ -744,7 +743,6 @@
     <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-
 
 <p>Return cache file input data from cache folder for certain problem</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">cache_file_data</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -764,7 +762,6 @@
     <span class="k">return</span> <span class="n">input_data</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="check_if_downloaded">check_if_downloaded</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">check_if_downloaded</span><span class="p">(</span>
@@ -773,7 +770,6 @@
     <span class="n">session</span><span class="p">:</span> <span class="nb">int</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>
-
 
 <p>Check if an input is downloaded and cached or not in cache location</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">check_if_downloaded</span><span class="p">(</span><span class="n">year</span><span class="p">:</span> <span class="nb nb-Type">int</span><span class="p">,</span> <span class="n">day</span><span class="p">:</span> <span class="nb nb-Type">int</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="nb nb-Type">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb nb-Type">bool</span><span class="p">:</span>
@@ -787,7 +783,6 @@
     <span class="k">return</span> <span class="n">cache_file</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="check_less_than_one_min_submission">check_less_than_one_min_submission</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">check_less_than_one_min_submission</span><span class="p">(</span>
@@ -796,7 +791,6 @@
     <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>
-
 
 <p>Check last submission time for solution return true if time is less than 60 second</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">check_less_than_one_min_submission</span><span class="p">(</span><span class="k">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">session</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">bool</span><span class="p">:</span>
@@ -820,7 +814,6 @@
     <span class="k">return</span> <span class="n">early_submission</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="delete_input">delete_input</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">delete_input</span><span class="p">(</span>
@@ -829,7 +822,6 @@
     <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Delete input from a cache folder</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">delete_input</span><span class="p">(</span><span class="k">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">session</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
@@ -843,7 +835,6 @@
         <span class="n">os</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">cache_file</span><span class="p">)</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="last_submitted_answer_message">last_submitted_answer_message</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">last_submitted_answer_message</span><span class="p">(</span>
@@ -854,7 +845,6 @@
     <span class="n">output</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-
 
 <p>Check if answer is already submitted by user if submitted return message of last
 submission</p>
@@ -895,7 +885,6 @@ submission</p>
     <span class="k">return</span> <span class="n">last_answer_message</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="save_input_to_location">save_input_to_location</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">save_input_to_location</span><span class="p">(</span>
@@ -905,7 +894,6 @@ submission</p>
     <span class="n">input_data</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Save a input to its cache location for future reference and use</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">save_input_to_location</span><span class="p">(</span><span class="k">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">session</span><span class="p">:</span> <span class="n">str</span><span class="p">,</span> <span class="n">input_data</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
@@ -923,7 +911,6 @@ submission</p>
         <span class="n">opened_file</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="n">input_data</span><span class="p">)</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="save_last_submission_time">save_last_submission_time</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">save_last_submission_time</span><span class="p">(</span>
@@ -932,7 +919,6 @@ submission</p>
     <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Save a time where a request is performed for last submission</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">save_last_submission_time</span><span class="p">(</span><span class="k">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="k">session</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
@@ -946,7 +932,6 @@ submission</p>
         <span class="n">opened_file</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="n">str</span><span class="p">(</span><span class="k">time</span><span class="p">.</span><span class="k">time</span><span class="p">()))</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="save_submitted_answer">save_submitted_answer</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">save_submitted_answer</span><span class="p">(</span>
@@ -958,7 +943,6 @@ submission</p>
     <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Save submitted input to file of problem</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">save_submitted_answer</span><span class="p">(</span>
@@ -975,7 +959,6 @@ submission</p>
 
         <span class="n">opened_file</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="ss">&quot;{}!{}:{}\n&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">part</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">message</span><span class="p">))</span>
 </code></pre></div>
-
 
 </details>
                 

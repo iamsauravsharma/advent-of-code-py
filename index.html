@@ -510,11 +510,9 @@ Currently it is still in beta stage which may have lots of bug please report bug
 <div class="codehilite"><pre><span></span><code>pip install advent-of-code-py
 </code></pre></div>
 
-
 <p><strong>OR</strong></p>
 <div class="codehilite"><pre><span></span><code>poetry add advent-of-code-py
 </code></pre></div>
-
 
 <h3 id="usage_1">Usage</h3>
 <p>Initially for advent-of-code-py to work it need session value or session ID which you can obtain by viewing cookie while visiting advent of code server.
@@ -522,11 +520,9 @@ After collecting session cookie value you need to add those values in config usi
 <div class="codehilite"><pre><span></span><code>advent-of-code-py config add &lt;session-name&gt; &lt;session-value&gt;
 </code></pre></div>
 
-
 <p>Now you can import library by using</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">advent_of_code_py</span>
 </code></pre></div>
-
 
 <p>After importing a library you can use either two decorator present which are solve or submit decorator for a function of puzzle</p>
 <p>For example:-</p>
@@ -536,11 +532,9 @@ After collecting session cookie value you need to add those values in config usi
     <span class="k">return</span> <span class="n">final_output</span>
 </code></pre></div>
 
-
 <p>Now after decorating function now you can call function like regular function call</p>
 <div class="codehilite"><pre><span></span><code><span class="n">puzzle_2018_3_1</span><span class="p">()</span>
 </code></pre></div>
-
 
 <p>After calling function <code>final_output</code> value will be submitted by library to Advent of Code server for 2018 year day 3
 problem, then returns whether the submitted answer was correct or not. If session value is not provided then
@@ -557,7 +551,6 @@ To set advent-of-code-py puzzle as CLI</p>
     <span class="c1"># add other function</span>
     <span class="k">return</span> <span class="n">initializer</span>
 </code></pre></div>
-
 
 <p>Now you can set main_cli as entry points and it will create CLI with appropriate name and function which was added.
 So for example to run function puzzle_2018_3_1() you have to run command as <code>entry-point-name run p_3_1</code> which

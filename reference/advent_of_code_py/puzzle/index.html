@@ -754,12 +754,10 @@
     <span class="k">return</span> <span class="n">_action</span>
 </code></pre></div>
 
-
 </details>
 <h2 id="variables">Variables</h2>
 <div class="codehilite"><pre><span></span><code><span class="n">T</span>
 </code></pre></div>
-
 
 <h2 id="functions">Functions</h2>
 <h3 id="solve">solve</h3>
@@ -767,11 +765,10 @@
     <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">session_list</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">input_file</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">session_list</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">input_file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Puzzle decorator used to only solve a solution &amp; print output value. It doesn't
 submit output to advent of code server to validate whether an answer is correct
@@ -842,18 +839,16 @@ only reference purpose of printing output.</p>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_action</span><span class="w"></span>
 </code></pre></div>
 
-
 </details>
 <h3 id="submit">submit</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">submit</span><span class="p">(</span>
     <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">day</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">part</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-    <span class="n">session_list</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">input_file</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">session_list</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">input_file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Puzzle decorator used to submit a solution to advent_of_code server and provide
 result. If input_file is not present then it tries to download file and cache it
@@ -917,7 +912,6 @@ input it can use.</p>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_action</span><span class="w"></span>
 </code></pre></div>
-
 
 </details>
                 

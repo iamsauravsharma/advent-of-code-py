@@ -860,7 +860,6 @@
     <span class="k">return</span> <span class="n">session_list</span>
 </code></pre></div>
 
-
 </details>
 <h2 id="functions">Functions</h2>
 <h3 id="add_to_json">add_to_json</h3>
@@ -868,7 +867,6 @@
     <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Add new session to json config file</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">add_to_json</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
@@ -886,14 +884,12 @@
         <span class="n">opened_file</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="k">data</span><span class="p">.</span><span class="n">to_json</span><span class="p">())</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="delete_from_json">delete_from_json</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">delete_from_json</span><span class="p">(</span>
     <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Delete session from JSON config file</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">delete_from_json</span><span class="p">(</span><span class="k">session</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
@@ -911,14 +907,12 @@
         <span class="n">opened_file</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="k">data</span><span class="p">.</span><span class="n">to_json</span><span class="p">())</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="get_all_session">get_all_session</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_all_session</span><span class="p">(</span>
 
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
 </code></pre></div>
-
 
 <p>Return all session name</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">get_all_session</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">str</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
@@ -938,14 +932,12 @@
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">session_list</span><span class="w"></span>
 </code></pre></div>
 
-
 </details>
 <h3 id="get_session_value">get_session_value</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_session_value</span><span class="p">(</span>
     <span class="n">session_name</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-
 
 <p>Return session name value from JSON config file</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">get_session_value</span><span class="p">(</span><span class="n">session_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -969,14 +961,12 @@
     <span class="n">raise</span> <span class="n">Exception</span><span class="p">(</span><span class="s2">&quot;{} key is not present in config file&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">session_name</span><span class="p">))</span>
 </code></pre></div>
 
-
 </details>
 <h3 id="list_from_json">list_from_json</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">list_from_json</span><span class="p">(</span>
 
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>List all session from a JSON file along with value</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">list_from_json</span><span class="p">():</span>
@@ -996,7 +986,6 @@
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{} = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">))</span>
 </code></pre></div>
 
-
 </details>
 <h2 id="classes">Classes</h2>
 <h3 id="data">Data</h3>
@@ -1004,7 +993,6 @@
     <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Class to store data about a config file of advent-of-code</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">Data</span><span class="p">:</span>
@@ -1054,7 +1042,6 @@
             <span class="n">raise</span> <span class="n">Exception</span><span class="p">(</span><span class="s2">&quot;Value with name {} not found over config&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">session</span><span class="p">))</span>
 </code></pre></div>
 
-
 </details>
 <hr />
 <h4 id="static-methods">Static methods</h4>
@@ -1063,7 +1050,6 @@
     <span class="n">json_str</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Create Data type from JSON</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="err">@</span><span class="n">classmethod</span>
@@ -1079,7 +1065,6 @@
         <span class="k">return</span> <span class="n">cls</span><span class="p">(</span><span class="o">**</span><span class="n">json_data</span><span class="p">)</span>
 </code></pre></div>
 
-
 </details>
 <h4 id="methods">Methods</h4>
 <h5 id="add_session">add_session</h5>
@@ -1089,7 +1074,6 @@
 <span class="p">)</span>
 </code></pre></div>
 
-
 <p>Add new session or update session in a config file Data type.</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">add_session</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
 
@@ -1098,7 +1082,6 @@
         <span class="k">self</span><span class="p">.</span><span class="n">session_list</span><span class="p">.</span><span class="k">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
 </code></pre></div>
 
-
 </details>
 <h5 id="delete_session">delete_session</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">delete_session</span><span class="p">(</span>
@@ -1106,7 +1089,6 @@
     <span class="n">session</span><span class="p">:</span> <span class="nb">str</span>
 <span class="p">)</span>
 </code></pre></div>
-
 
 <p>Delete Session from config files</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">delete_session</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="k">session</span><span class="p">:</span> <span class="n">str</span><span class="p">):</span>
@@ -1122,14 +1104,12 @@
             <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;Value with name {} not found over config&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="k">session</span><span class="p">))</span>
 </code></pre></div>
 
-
 </details>
 <h5 id="to_json">to_json</h5>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">to_json</span><span class="p">(</span>
     <span class="bp">self</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
-
 
 <p>Convert Data to JSON type</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">to_json</span><span class="p">(</span><span class="k">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">str</span><span class="p">:</span>
@@ -1138,7 +1118,6 @@
 
         <span class="k">return</span> <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">__dict__</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
 </code></pre></div>
-
 
 </details>
                 
