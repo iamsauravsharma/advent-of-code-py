@@ -6,9 +6,9 @@ Currently it is still in beta stage which may have lots of bug please report bug
 
 **Status & Info:**
 
-| Travis Build Status | Code style | License | Project Version |
-| :---: | :---: | :---: | :---: |
-| [![Travis Build Status][build_badge]][build_link] | [![Code style][black_badge]][black_link] | [![License: MIT][license_badge]][license_link] | [![PyPI][project_badge]][project_link] |
+| Code style | License | Project Version |
+| :---: | :---: | :---: |
+| [![Code style][black_badge]][black_link] | [![License: MIT][license_badge]][license_link] | [![PyPI][project_badge]][project_link] |
 
 ## Usage
 
@@ -73,9 +73,6 @@ will run appropriate function as well as submit as desired if function was decor
 prints its output.
 
 [advent_of_code_link]: https://adventofcode.com
-
-[build_badge]: https://img.shields.io/travis/com/iamsauravsharma/advent-of-code-py.svg?logo=travis
-[build_link]: https://travis-ci.com/iamsauravsharma/advent-of-code-py
 
 [black_badge]: https://img.shields.io/badge/code%20style-black-000000.svg
 [black_link]: https://github.com/ambv/black

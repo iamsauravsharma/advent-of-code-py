@@ -11,13 +11,13 @@ include_trailing_comma = true
 name = "advent-of-code-py"
 version = "0.2.0"
 description = "Advent of Code helper CLI and library"
-authors = ["Saurav Sharma <appdroiddeveloper@gmail.com>"]
+authors = [ "Saurav Sharma <appdroiddeveloper@gmail.com>" ]
 readme = "README.md"
 license = "MIT"
 homepage = "https://github.com/iamsauravsharma/advent-of-code-py"
 repository = "https://github.com/iamsauravsharma/advent-of-code-py"
 documentation = "https://iamsauravsharma.github.io/advent-of-code-py"
-keywords = ["advent-of-code","aoc","aocpy","advent of code"]
+keywords = [ "advent-of-code", "aoc", "aocpy", "advent of code" ]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -45,8 +45,8 @@ safety = "^1.9.0"
 advent-of-code-py = "advent_of_code_py.cli:main"
 
 [tool.portray]
-modules = ["advent_of_code_py"]
+modules = [ "advent_of_code_py" ]
 
 [tool.portray.mkdocs.theme]
 name = "material"
-palette = {primary = "black", accent = "indigo"}
+palette = { primary = "black", accent = "indigo" }
