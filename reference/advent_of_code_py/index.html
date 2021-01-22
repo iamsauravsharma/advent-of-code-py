@@ -387,8 +387,7 @@
     Static methods
   </a>
   
-    <nav class="md-nav" aria-label="Static methods">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#construct" class="md-nav__link">
@@ -453,11 +452,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#instance-variables" class="md-nav__link">
     Instance variables
@@ -470,8 +464,7 @@
     Methods
   </a>
   
-    <nav class="md-nav" aria-label="Methods">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#add" class="md-nav__link">
@@ -540,11 +533,6 @@
   <a href="#to_string" class="md-nav__link">
     to_string
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -734,8 +722,7 @@
     Static methods
   </a>
   
-    <nav class="md-nav" aria-label="Static methods">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#construct" class="md-nav__link">
@@ -800,11 +787,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#instance-variables" class="md-nav__link">
     Instance variables
@@ -817,8 +799,7 @@
     Methods
   </a>
   
-    <nav class="md-nav" aria-label="Methods">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#add" class="md-nav__link">
@@ -899,11 +880,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -926,8 +902,8 @@
                 
                 
                 <h1 id="module-advent_of_code_py">Module advent_of_code_py</h1>
-<p>advent of code helper module. Provide CLI and library to submit and solve advent of
-code problems easily.</p>
+<p>advent of code helper module. Provide CLI and library to submit and solve advent of</p>
+<p>code problems easily.</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">advent of code helper module. Provide CLI and library to submit and solve advent of</span>
@@ -966,8 +942,8 @@ code problems easily.</p>
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Advent of code runner decorator which decorates a function for a simple CLI
-tool creation. Function which is decorated using a advent of code runner should
+<p>Advent of code runner decorator which decorates a function for a simple CLI</p>
+<p>tool creation. Function which is decorated using a advent of code runner should
 return a Initializer class so it can create a CLI from Initializer class object</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">advent_runner</span><span class="p">(</span><span class="k">func</span><span class="p">):</span>
 
@@ -1031,8 +1007,8 @@ return a Initializer class so it can create a CLI from Initializer class object<
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Puzzle decorator used to only solve a solution &amp; print output value. It doesn't
-submit output to advent of code server to validate whether an answer is correct
+<p>Puzzle decorator used to only solve a solution &amp; print output value. It doesn't</p>
+<p>submit output to advent of code server to validate whether an answer is correct
 or not. By default it downloads input file from advent-of-code server. Puzzle
 can also be solved by using custom file location with help of input_file parameter
 while using input_file year, day, part are required even if they are not used for
@@ -1111,8 +1087,8 @@ only reference purpose of printing output.</p>
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Puzzle decorator used to submit a solution to advent_of_code server and provide
-result. If input_file is not present then it tries to download file and cache it
+<p>Puzzle decorator used to submit a solution to advent_of_code server and provide</p>
+<p>result. If input_file is not present then it tries to download file and cache it
 for submiting solution else it require to be provided with input_file path which
 input it can use.</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">submit</span><span class="p">(</span><span class="w"></span>
@@ -1183,10 +1159,6 @@ input it can use.</p>
 <span class="p">)</span>
 </code></pre></div>
 
-<p>Initialize class which is used to initialize an advent of code function runner.
-Initialize create a basic class which is used for adding of different
-function of advent of code solution so all of functions can be easily run with
-one simple CLI tool.</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">Initializer</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot;</span>
@@ -1264,22 +1236,22 @@ one simple CLI tool.</p>
 </code></pre></div>
 
 <h4 id="static-methods">Static methods</h4>
-<h5 id="construct">construct</h5>
+<h4 id="construct">construct</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">construct</span><span class="p">(</span>
     <span class="n">_fields_set</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ForwardRef</span><span class="p">(</span><span class="s1">&#39;SetStr&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="o">**</span><span class="n">values</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
 
-<p>Creates a new model setting <strong>dict</strong> and <strong>fields_set</strong> from trusted or pre-validated data.
-Default values are respected, but no other validation is performed.</p>
-<h5 id="from_orm">from_orm</h5>
+<p>Creates a new model setting <strong>dict</strong> and <strong>fields_set</strong> from trusted or pre-validated data.</p>
+<p>Default values are respected, but no other validation is performed.</p>
+<h4 id="from_orm">from_orm</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">from_orm</span><span class="p">(</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
 
-<h5 id="parse_file">parse_file</h5>
+<h4 id="parse_file">parse_file</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_file</span><span class="p">(</span>
     <span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">],</span>
     <span class="o">*</span><span class="p">,</span>
@@ -1290,13 +1262,13 @@ Default values are respected, but no other validation is performed.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
 
-<h5 id="parse_obj">parse_obj</h5>
+<h4 id="parse_obj">parse_obj</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_obj</span><span class="p">(</span>
     <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
 
-<h5 id="parse_raw">parse_raw</h5>
+<h4 id="parse_raw">parse_raw</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_raw</span><span class="p">(</span>
     <span class="n">b</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">],</span>
     <span class="o">*</span><span class="p">,</span>
@@ -1307,14 +1279,14 @@ Default values are respected, but no other validation is performed.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
 </code></pre></div>
 
-<h5 id="schema">schema</h5>
+<h4 id="schema">schema</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">schema</span><span class="p">(</span>
     <span class="n">by_alias</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">ref_template</span><span class="p">:</span> <span class="s1">&#39;unicode&#39;</span> <span class="o">=</span> <span class="s1">&#39;#/definitions/</span><span class="si">{model}</span><span class="s1">&#39;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;DictStrAny&#39;</span>
 </code></pre></div>
 
-<h5 id="schema_json">schema_json</h5>
+<h4 id="schema_json">schema_json</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">schema_json</span><span class="p">(</span>
     <span class="o">*</span><span class="p">,</span>
     <span class="n">by_alias</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -1323,14 +1295,14 @@ Default values are respected, but no other validation is performed.</p>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;unicode&#39;</span>
 </code></pre></div>
 
-<h5 id="update_forward_refs">update_forward_refs</h5>
+<h4 id="update_forward_refs">update_forward_refs</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">update_forward_refs</span><span class="p">(</span>
     <span class="o">**</span><span class="n">localns</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
 <p>Try to update ForwardRefs on fields based on this Model, globalns and localns.</p>
-<h5 id="validate">validate</h5>
+<h4 id="validate">validate</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span>
     <span class="n">value</span><span class="p">:</span> <span class="n">Any</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Model&#39;</span>
@@ -1341,7 +1313,7 @@ Default values are respected, but no other validation is performed.</p>
 </code></pre></div>
 
 <h4 id="methods">Methods</h4>
-<h5 id="add">add</h5>
+<h4 id="add">add</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">add</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">**</span><span class="n">kwargs</span>
@@ -1357,7 +1329,7 @@ Default values are respected, but no other validation is performed.</p>
 </code></pre></div>
 
 </details>
-<h5 id="copy">copy</h5>
+<h4 id="copy">copy</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">copy</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;Model&#39;</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
@@ -1369,13 +1341,65 @@ Default values are respected, but no other validation is performed.</p>
 </code></pre></div>
 
 <p>Duplicate a model, optionally choose which fields to include, exclude and change.</p>
-<p>:param include: fields to include in new model
-:param exclude: fields to exclude from new model, as with values this takes precedence over include
-:param update: values to change/add in the new model. Note: the data is not validated before creating
-    the new model: you should trust this data
-:param deep: set to <code>True</code> to make a deep copy of the model
-:return: new model instance</p>
-<h5 id="dict">dict</h5>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>include</td>
+<td>None</td>
+<td>fields to include in new model</td>
+<td>None</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>None</td>
+<td>fields to exclude from new model, as with values this takes precedence over include</td>
+<td>None</td>
+</tr>
+<tr>
+<td>update</td>
+<td>None</td>
+<td>values to change/add in the new model. Note: the data is not validated before creating</td>
+<td></td>
+</tr>
+<tr>
+<td>the new model: you should trust this data</td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>deep</td>
+<td>None</td>
+<td>set to <code>True</code> to make a deep copy of the model</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>new model instance</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dict">dict</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">dict</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
@@ -1390,7 +1414,7 @@ Default values are respected, but no other validation is performed.</p>
 </code></pre></div>
 
 <p>Generate a dictionary representation of the model, optionally specifying which fields to include or exclude.</p>
-<h5 id="extend">extend</h5>
+<h4 id="extend">extend</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">extend</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">another_initializer</span><span class="p">:</span> <span class="s1">&#39;Initializer&#39;</span>
@@ -1406,7 +1430,7 @@ Default values are respected, but no other validation is performed.</p>
 </code></pre></div>
 
 </details>
-<h5 id="get_function_list">get_function_list</h5>
+<h4 id="get_function_list">get_function_list</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_function_list</span><span class="p">(</span>
     <span class="bp">self</span>
 <span class="p">)</span>
@@ -1421,7 +1445,7 @@ Default values are respected, but no other validation is performed.</p>
 </code></pre></div>
 
 </details>
-<h5 id="json">json</h5>
+<h4 id="json">json</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">json</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
@@ -1439,7 +1463,7 @@ Default values are respected, but no other validation is performed.</p>
 
 <p>Generate a JSON representation of the model, <code>include</code> and <code>exclude</code> arguments as per <code>dict()</code>.</p>
 <p><code>encoder</code> is an optional function to supply as <code>default</code> to json.dumps(), other arguments as per <code>json.dumps()</code>.</p>
-<h5 id="list_functions">list_functions</h5>
+<h4 id="list_functions">list_functions</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">list_functions</span><span class="p">(</span>
     <span class="bp">self</span>
 <span class="p">)</span>
@@ -1464,7 +1488,7 @@ Default values are respected, but no other validation is performed.</p>
 </code></pre></div>
 
 </details>
-<h5 id="run">run</h5>
+<h4 id="run">run</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">function_alias</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span>
@@ -1480,7 +1504,7 @@ Default values are respected, but no other validation is performed.</p>
 </code></pre></div>
 
 </details>
-<h5 id="run_all">run_all</h5>
+<h4 id="run_all">run_all</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">run_all</span><span class="p">(</span>
     <span class="bp">self</span>
 <span class="p">)</span>
@@ -1497,7 +1521,7 @@ Default values are respected, but no other validation is performed.</p>
 </code></pre></div>
 
 </details>
-<h5 id="to_string">to_string</h5>
+<h4 id="to_string">to_string</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">to_string</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">pretty</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
